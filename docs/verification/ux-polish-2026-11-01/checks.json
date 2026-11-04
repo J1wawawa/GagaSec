@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-01",
+  "version": "0.10.1",
+  "platform": "Apple Silicon macOS",
+  "nativePassed": 185,
+  "layoutChecks": 72,
+  "errors": [],
+  "statusToastVerified": true,
+  "modelCalls": false,
+  "userWorkspaceModifiedByTests": false
+}

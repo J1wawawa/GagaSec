@@ -1,0 +1,32 @@
+name: 调查案例与研究文章投稿
+description: 贡献可复核的分析思路，保留来源与署名意愿
+body:
+  - type: input
+    id: attribution
+    attributes:
+      label: 希望使用的公开署名
+      description: 可填写昵称或匿名，不要填写私人联系方式。
+    validations:
+      required: true
+  - type: textarea
+    id: article
+    attributes:
+      label: 文章正文或有权公开的稿件链接
+      description: 说明场景、分析过程、证据、处置与限制；样本只提交 Hash 和公开报告链接。
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 原创部分、引用来源与第三方许可
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: 投稿确认
+      options:
+        - label: 我有公开权限，已移除客户信息、凭据、未公开漏洞与真实恶意样本附件。
+          required: true
+        - label: 原创内容可按项目当前 LICENSE.txt 提供；我理解投稿不保证合并、上线时间或稿酬。
+          required: true

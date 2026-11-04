@@ -1,0 +1,650 @@
+.content-scroll.module-lan {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+}
+.lan-workspace {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+.lan-topbar {
+  padding: 16px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.lan-topbar h1 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.lan-topbar > div > span,
+.lan-small {
+  font-size: 11px;
+  color: var(--muted);
+}
+.lan-controls {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+}
+.lan-controls label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.lan-controls input {
+  width: 135px;
+  min-width: 0;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+}
+.lan-banner {
+  padding: 9px 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--hover);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.lan-banner.is-error,
+.lan-pair-error {
+  color: var(--danger, #c73535);
+}
+.lan-banner button {
+  color: inherit;
+  background: transparent;
+  border: 0;
+}
+.lan-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 246px minmax(0, 1fr);
+}
+.lan-roster {
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 14px 10px;
+}
+.lan-roster-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 9px 11px;
+  gap: 8px;
+  font-size: 11px;
+}
+.lan-roster-heading > span {
+  color: var(--muted);
+  font-weight: 400;
+}
+.lan-peer-list {
+  padding-bottom: 16px;
+}
+.lan-group-list {
+  display: grid;
+  gap: 5px;
+  padding: 0 10px 12px;
+}
+.lan-group-list button {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 8px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.lan-group-list button.selected {
+  background: var(--surface-muted);
+  border-color: var(--line);
+}
+.lan-group-list button span:nth-child(2) {
+  display: grid;
+  gap: 2px;
+}
+.lan-group-list small,
+.lan-group-list p {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+.lan-notifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: baseline;
+  margin: 0 18px 10px;
+  padding: 9px 12px;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent) 7%, var(--surface));
+  font-size: 12px;
+}
+.lan-notifications strong {
+  color: var(--accent);
+}
+.lan-notifications span {
+  color: var(--text-muted);
+}
+.lan-peer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  text-align: left;
+  padding: 11px 9px;
+  background: transparent;
+  color: var(--text);
+  transition: background 120ms ease;
+}
+.lan-peer:hover {
+  background: var(--hover);
+}
+.lan-peer.selected {
+  background: var(--selected);
+}
+.lan-avatar {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 14px;
+}
+.lan-peer > span:last-child {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+.lan-peer strong,
+.lan-nearby strong {
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.lan-peer small,
+.lan-nearby small {
+  font-size: 10px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.lan-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted);
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+.lan-dot.online {
+  background: #32a16a;
+  opacity: 1;
+}
+.lan-roster-empty,
+.lan-nearby > p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+  padding: 0 9px;
+}
+.lan-nearby > button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text);
+  border: 1px dashed var(--line);
+  border-radius: 7px;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 7px;
+}
+.lan-nearby > button > span {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+.lan-storage {
+  margin: auto 8px 0;
+  padding-top: 22px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+.lan-storage summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+.lan-storage p {
+  margin: 9px 0;
+}
+.lan-storage code,
+.lan-file-hash code {
+  display: block;
+  font-size: 9px;
+  overflow-wrap: anywhere;
+}
+.lan-storage small {
+  display: block;
+  margin-top: 8px;
+}
+.lan-conversation {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+.lan-chat-header {
+  padding: 15px 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.lan-chat-header > div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.lan-chat-header strong {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.lan-chat-header span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.lan-message-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 20px clamp(20px, 4vw, 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.lan-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 85%;
+  width: fit-content;
+}
+.lan-message.outgoing {
+  margin-left: auto;
+  align-items: flex-end;
+}
+.lan-message-time {
+  color: var(--muted);
+  font-size: 9px;
+  margin: 0 3px 6px;
+}
+.lan-bubble {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 12px 15px;
+  border-radius: 2px 12px 12px 12px;
+  min-width: 42px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.outgoing .lan-bubble {
+  background: var(--selected);
+  border-radius: 12px 2px 12px 12px;
+}
+.lan-bubble > p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+.lan-message-status {
+  color: var(--muted);
+  font-size: 9px;
+  padding: 5px 3px 0;
+  display: flex;
+  gap: 8px;
+}
+.lan-message-status button,
+.lan-load-history {
+  background: transparent;
+  color: var(--text);
+  border: 0;
+  font-size: 10px;
+  text-decoration: underline;
+}
+.lan-load-history {
+  align-self: center;
+  color: var(--muted);
+  padding: 5px;
+}
+.lan-chat-image {
+  display: block;
+  max-width: min(300px, 100%);
+  max-height: 240px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.lan-file {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 310px;
+}
+.lan-file > div {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+.lan-file strong {
+  font-size: 12px;
+  font-weight: 550;
+}
+.lan-file small {
+  color: var(--muted);
+  font-size: 10px;
+}
+.lan-file-hash {
+  font-size: 9px;
+  color: var(--muted);
+  margin: 10px 0;
+  max-width: 300px;
+}
+.lan-file-hash summary {
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+.lan-message-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.lan-message .button {
+  padding: 5px 9px;
+  font-size: 10px;
+}
+.lan-composer {
+  border-top: 1px solid var(--line);
+  padding: 10px 20px 12px;
+  position: relative;
+  background: var(--surface);
+}
+.lan-composer-tools {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+.lan-composer-tools button {
+  color: var(--muted);
+  padding: 5px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+}
+.lan-composer-tools button:hover {
+  background: var(--hover);
+  color: var(--text);
+}
+.lan-composer-tools > span {
+  font-size: 9px;
+  margin-left: auto;
+  color: var(--muted);
+}
+.lan-composer textarea {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  resize: none;
+  min-height: 55px;
+  max-height: 100px;
+  padding: 9px 3px;
+  width: 100%;
+  color: var(--text);
+  font-size: 12px;
+  font-family: inherit;
+  line-height: 1.65;
+  box-sizing: border-box;
+}
+.lan-composer footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.lan-composer footer > span {
+  min-width: 0;
+  line-height: 1.6;
+  color: var(--muted);
+  font-size: 9px;
+}
+.lan-emojis {
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  position: absolute;
+  z-index: 2;
+  bottom: 100%;
+  left: 12px;
+  background: var(--surface);
+  box-shadow: 0 8px 30px #0001;
+}
+.lan-emojis button {
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 20px;
+  padding: 5px;
+  color: var(--text);
+}
+.lan-emojis button:hover {
+  background: var(--hover);
+}
+.lan-attachment-draft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  margin: 6px 0;
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+}
+.lan-attachment-draft > img {
+  max-width: 88px;
+  max-height: 62px;
+  object-fit: contain;
+}
+.lan-attachment-draft > div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.lan-attachment-draft span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.lan-welcome,
+.lan-chat-empty {
+  flex: 1;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  color: var(--muted);
+  padding: 20px;
+}
+.lan-welcome-icon {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: var(--surface);
+}
+.lan-welcome h2 {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 550;
+  margin: 6px 0 0;
+}
+.lan-welcome p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.lan-welcome small {
+  font-size: 10px;
+  line-height: 1.8;
+  margin-top: 12px;
+}
+.lan-chat-empty strong {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+.lan-chat-empty span {
+  font-size: 11px;
+}
+.lan-pair-modal {
+  width: min(580px, calc(100vw - 60px));
+  box-sizing: border-box;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 12px;
+  color: var(--text);
+}
+.lan-pair-modal header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.lan-pair-modal h2 {
+  font-size: 17px;
+  margin: 0;
+}
+.lan-pair-modal p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.lan-pair-modal label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  margin: 17px 0;
+}
+.lan-pair-modal textarea,
+.lan-pair-modal input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--text);
+  background: var(--bg);
+  font-size: 11px;
+}
+.lan-pair-modal textarea {
+  height: 76px;
+  resize: vertical;
+  word-break: break-all;
+}
+.lan-pair-own {
+  padding: 14px;
+  background: var(--hover);
+  border-radius: 7px;
+}
+.lan-pair-own textarea {
+  margin: 12px 0 6px;
+}
+.lan-pair-modal footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 8px;
+}
+@media (max-width: 1100px) {
+  .lan-topbar {
+    padding: 12px 16px;
+  }
+  .lan-topbar > div > span {
+    display: none;
+  }
+  .lan-controls label {
+    font-size: 0;
+  }
+  .lan-controls input {
+    font-size: 11px;
+    width: 120px;
+  }
+  .lan-body {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+  .lan-message-list {
+    padding: 16px 22px;
+  }
+  .lan-composer-tools > span {
+    font-size: 8px;
+  }
+}

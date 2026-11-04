@@ -1,0 +1,85 @@
+.desktop-settings[data-settings-view='logs'] [data-settings='logs'] {
+  display: block;
+}
+.runtime-logs {
+  min-width: 0;
+}
+.runtime-log-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.runtime-log-tools input {
+  flex: 1;
+  min-width: 170px;
+}
+.runtime-log-tools input,
+.runtime-log-tools select {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 12px;
+}
+.runtime-log-location {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+.runtime-log-location code {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.runtime-log-list {
+  display: grid;
+  gap: 10px;
+}
+.runtime-log-list article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  min-width: 0;
+}
+.runtime-log-list header,
+.runtime-log-list footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  font-size: 11px;
+}
+.runtime-log-list header span,
+.runtime-log-list time,
+.runtime-log-list footer code {
+  color: var(--muted);
+  font-size: 10px;
+}
+.runtime-log-list time {
+  margin-left: auto;
+}
+.runtime-log-list pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font:
+    12px/1.7 ui-monospace,
+    monospace;
+  user-select: text;
+}
+.runtime-log-list footer {
+  justify-content: space-between;
+}
+.runtime-log-list footer code {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.runtime-log-ids {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.runtime-log-list [data-log-level='error'] header strong {
+  color: var(--danger, #c73535);
+}

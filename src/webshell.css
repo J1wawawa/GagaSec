@@ -1,0 +1,284 @@
+.webshell-workbench {
+  min-width: 0;
+  display: grid;
+  gap: 12px;
+}
+.webshell-intro,
+.webshell-layer > header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.webshell-intro h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.webshell-intro > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+.webshell-intro h3,
+.webshell-intro p {
+  margin: 0;
+  font-size: 11px;
+}
+.webshell-intro p,
+.webshell-layer header p,
+.webshell-traces p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.webshell-grid {
+  display: grid;
+  grid-template-columns: minmax(210px, 260px) minmax(0, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.webshell-layers {
+  border-right: 1px solid var(--line);
+  max-height: 640px;
+  overflow: auto;
+  padding: 12px;
+}
+.webshell-layers button {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 12px;
+  text-align: left;
+  border-radius: 5px;
+}
+.webshell-layers button[aria-pressed='true'] {
+  background: var(--hover);
+}
+.webshell-layers button span {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+.webshell-layers strong {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.webshell-layers small {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.webshell-layer {
+  padding: 20px 22px 24px;
+  min-width: 0;
+}
+.webshell-layer dl {
+  display: grid;
+  gap: 5px;
+  margin: 12px 0;
+}
+.webshell-layer dt {
+  color: var(--muted);
+  font-size: 11px;
+}
+.webshell-layer dd {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+  margin: 0 0 6px;
+}
+.webshell-code-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.webshell-code {
+  min-height: 180px;
+  max-height: 520px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  line-height: 1.7;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.webshell-expression pre {
+  max-height: 160px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+.webshell-clues > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding: 8px 0;
+}
+.webshell-finding {
+  min-width: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.webshell-finding span {
+  font-size: 11px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.webshell-clues h4,
+.webshell-traces h4 {
+  margin: 14px 0 6px;
+  font-size: 12px;
+}
+.webshell-traces code {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.webshell-coverage > summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+.webshell-coverage > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.webshell-coverage article {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 16px;
+}
+.webshell-coverage strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.webshell-coverage p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.webshell-check {
+  font-size: 11px;
+  padding: 3px 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+@media (max-width: 1080px) {
+  .webshell-grid {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+  .webshell-layer {
+    padding: 12px;
+  }
+  .webshell-coverage > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keep the code and its findings inside the client window. Each pane scrolls
+   independently; source hashes remain available without pushing code below it. */
+.sample-workspace > .analysis-head {
+  flex-shrink: 0;
+  min-height: 38px;
+  margin: 0;
+  padding: 0;
+}
+.sample-workspace > .analysis-layout {
+  margin-top: 0;
+}
+.results-pane:has(.webshell-workbench) .result-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-right: 0;
+}
+.webshell-workbench {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+  gap: 12px;
+}
+.webshell-workbench > :not(.webshell-grid) {
+  flex-shrink: 0;
+}
+.webshell-workbench > .coverage-notice {
+  margin: 0;
+  font-size: 11px;
+  padding: 8px 10px;
+}
+.webshell-grid {
+  flex: 1;
+  min-height: 0;
+}
+.webshell-layers {
+  min-height: 0;
+  max-height: none;
+}
+.webshell-layer {
+  min-height: 0;
+  overflow: auto;
+}
+.webshell-layers button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+}
+.webshell-layers button[aria-pressed='true'] {
+  color: var(--text);
+  background: var(--selected);
+}
+.webshell-finding {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  padding: 0;
+}
+.webshell-layer-metadata {
+  margin: 8px 0;
+}
+.webshell-layer-metadata > summary {
+  font-size: 11px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.webshell-coverage {
+  max-height: 180px;
+  overflow: auto;
+}
+.webshell-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.webshell-footer > .webshell-coverage {
+  flex: 1;
+  min-width: 0;
+}
+.webshell-footer > button {
+  flex-shrink: 0;
+}
+.results-pane:has(.webshell-workbench) .limitations {
+  flex-shrink: 0;
+  margin: 4px 0 0;
+}

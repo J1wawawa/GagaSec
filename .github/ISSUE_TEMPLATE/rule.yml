@@ -1,0 +1,30 @@
+name: 检测规则与日志适配投稿
+description: 用正反样例说明规则、覆盖与预期举证
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 行为与适用格式
+      description: 说明防御场景、日志字段、版本和规则来源。
+    validations:
+      required: true
+  - type: textarea
+    id: fixtures
+    attributes:
+      label: 合成或已授权脱敏样例、预期命中与正常反例
+      description: 不提交客户原始日志、凭据或恶意二进制；样例应足以复现定位。
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: 限制、误报情况与验证环境
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 来源与权利
+      options:
+        - label: 我有权按项目当前 LICENSE.txt 提交原创内容，已脱敏并注明第三方来源和许可。
+          required: true

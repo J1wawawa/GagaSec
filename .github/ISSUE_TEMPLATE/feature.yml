@@ -1,0 +1,15 @@
+name: 功能与体验建议
+description: 描述防御工作中的具体任务
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 当前任务与遇到的问题
+      description: "说明实际使用场景、当前操作和希望减少的步骤。"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为与验收方式
+      description: "可以提供脱敏案例；不要包含客户材料或凭据。"

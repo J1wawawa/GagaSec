@@ -1,0 +1,13 @@
+{
+  "passed": [
+    "HTTP and JavaScript redirect hops reach the final page",
+    "Disabled HTTP redirect never requests its destination",
+    "Disabled JavaScript navigation captures the entry page with an explicit gap",
+    "HTTP redirect into a different private host is blocked",
+    "IPv6 loopback redirect is classified and blocked",
+    "Connection failure never archives a Chromium error page as a website screenshot",
+    "HTTP redirect loop is bounded to eight requests"
+  ],
+  "errors": [],
+  "modelsCalled": false
+}

@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "device": "NDR",
+  "name": "入侵阶段-敏感路径访问-平时",
+  "code": "020335",
+  "tag": "A005_B032",
+  "sourceIp": "198.51.100.91",
+  "destinationIp": "",
+  "proof": "只有设备描述，没有请求、响应、URL、状态码或正文"
+}

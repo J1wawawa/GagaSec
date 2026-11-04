@@ -1,0 +1,1429 @@
+{
+  "baidu": {
+    "assetId": "b2752169-ddae-4119-b1a4-c8ab80a8fced",
+    "browserFinalUrl": null,
+    "browserNavigations": [],
+    "changes": [
+      "页面覆盖受限：HTTP 静态原文包含 meta refresh；此响应尚未采到目标页面，浏览器结果另行记录。",
+      "页面覆盖受限：HTTP 静态原文包含脚本跳转线索；此原文未执行脚本，独立浏览器的最终地址与截图另行记录。",
+      "尚无人工确认基线；首次观测需复核，不能自动视为可信。"
+    ],
+    "coverageGaps": [
+      "HTTP 静态原文包含 meta refresh；此响应尚未采到目标页面，浏览器结果另行记录。",
+      "HTTP 静态原文包含脚本跳转线索；此原文未执行脚本，独立浏览器的最终地址与截图另行记录。"
+    ],
+    "createdAt": "2026-10-31T14:36:57.807589+00:00",
+    "domSha256": null,
+    "elapsedMs": 230,
+    "error": null,
+    "evidenceId": "d00e7611-794c-49d3-9590-9124c1f12153",
+    "externalLinks": [],
+    "finalUrl": "https://www.baidu.com/",
+    "hiddenLinks": [],
+    "id": "f811cd57-656c-4369-8942-f7d71157df2c",
+    "redirects": [],
+    "screenshot": null,
+    "screenshotError": null,
+    "scripts": [],
+    "sha256": "3d7414a921a24780e3fc3774dcbbf6dace8eec37162daed0fa0a0f3fb0b9a3a7",
+    "status": 200,
+    "title": ""
+  },
+  "commandInvocations": {
+    "analyze_alert_text": 1,
+    "analyze_file": 2,
+    "analyze_http_pair": 1,
+    "create_case": 1,
+    "create_response_action": 1,
+    "export_report": 2,
+    "get_ai_config": 1,
+    "get_ai_connection_tests": 1,
+    "get_ai_privacy": 1,
+    "get_ai_profiles": 1,
+    "get_dashboard": 1,
+    "get_local_analysis_jobs": 39,
+    "get_monitor_snapshots_page": 8,
+    "get_report_draft": 3,
+    "get_report_exports": 5,
+    "get_response_actions": 11,
+    "get_runtime_logs": 1,
+    "get_startup_state": 1,
+    "get_workspace": 16,
+    "platform_action.assetBaseline": 1,
+    "platform_action.assetCheck": 2,
+    "platform_action.assetImport": 1,
+    "platform_action.assetToggle": 1,
+    "platform_action.ruleAdd": 1,
+    "platform_state": 11,
+    "query_log_timeline": 1,
+    "read_http_text": 3,
+    "record_response_receipt": 1,
+    "record_ui_verification": 1,
+    "resize_ui_verification": 73,
+    "save_record_entry": 1,
+    "save_report_draft": 3,
+    "start_local_analysis": 2,
+    "switch_case": 1,
+    "ui_checkpoint": 208,
+    "update_response_action_status": 5
+  },
+  "errors": [],
+  "externalModelCalled": false,
+  "layouts": [
+    {
+      "height": 660,
+      "module": "http-input",
+      "panes": {
+        "[aria-label=\"HTTP 响应包\"]": {
+          "bottom": 491,
+          "height": 229,
+          "width": 429,
+          "x": 492,
+          "y": 262
+        },
+        "[aria-label=\"HTTP 请求包\"]": {
+          "bottom": 491,
+          "height": 229,
+          "width": 429,
+          "x": 39,
+          "y": 262
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "http-input",
+      "panes": {
+        "[aria-label=\"HTTP 响应包\"]": {
+          "bottom": 587,
+          "height": 321,
+          "width": 531,
+          "x": 602,
+          "y": 266
+        },
+        "[aria-label=\"HTTP 请求包\"]": {
+          "bottom": 587,
+          "height": 321,
+          "width": 531,
+          "x": 47,
+          "y": 266
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "http-input",
+      "panes": {
+        "[aria-label=\"HTTP 响应包\"]": {
+          "bottom": 687,
+          "height": 421,
+          "width": 601,
+          "x": 672,
+          "y": 266
+        },
+        "[aria-label=\"HTTP 请求包\"]": {
+          "bottom": 687,
+          "height": 421,
+          "width": 601,
+          "x": 47,
+          "y": 266
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "http-input",
+      "panes": {
+        "[aria-label=\"HTTP 响应包\"]": {
+          "bottom": 491,
+          "height": 229,
+          "width": 429,
+          "x": 492,
+          "y": 262
+        },
+        "[aria-label=\"HTTP 请求包\"]": {
+          "bottom": 491,
+          "height": 229,
+          "width": 429,
+          "x": 39,
+          "y": 262
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "http-input",
+      "panes": {
+        "[aria-label=\"HTTP 响应包\"]": {
+          "bottom": 587,
+          "height": 321,
+          "width": 531,
+          "x": 602,
+          "y": 266
+        },
+        "[aria-label=\"HTTP 请求包\"]": {
+          "bottom": 587,
+          "height": 321,
+          "width": 531,
+          "x": 47,
+          "y": 266
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "http-input",
+      "panes": {
+        "[aria-label=\"HTTP 响应包\"]": {
+          "bottom": 687,
+          "height": 421,
+          "width": 601,
+          "x": 672,
+          "y": 266
+        },
+        "[aria-label=\"HTTP 请求包\"]": {
+          "bottom": 687,
+          "height": 421,
+          "width": 601,
+          "x": 47,
+          "y": 266
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "http-expanded",
+      "panes": {
+        ".text-editor-focus": {
+          "bottom": 612,
+          "height": 596,
+          "width": 910,
+          "x": 25,
+          "y": 16
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "http-expanded",
+      "panes": {
+        ".text-editor-focus": {
+          "bottom": 696,
+          "height": 664,
+          "width": 1130,
+          "x": 25,
+          "y": 32
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "http-expanded",
+      "panes": {
+        ".text-editor-focus": {
+          "bottom": 796,
+          "height": 764,
+          "width": 1270,
+          "x": 25,
+          "y": 32
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "http-expanded",
+      "panes": {
+        ".text-editor-focus": {
+          "bottom": 612,
+          "height": 596,
+          "width": 910,
+          "x": 25,
+          "y": 16
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "http-expanded",
+      "panes": {
+        ".text-editor-focus": {
+          "bottom": 696,
+          "height": 664,
+          "width": 1130,
+          "x": 25,
+          "y": 32
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "http-expanded",
+      "panes": {
+        ".text-editor-focus": {
+          "bottom": 796,
+          "height": 764,
+          "width": 1270,
+          "x": 25,
+          "y": 32
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "http-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 314,
+          "width": 886,
+          "x": 37,
+          "y": 256
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "http-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 401,
+          "width": 1082,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "http-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 501,
+          "width": 1222,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "http-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 314,
+          "width": 886,
+          "x": 37,
+          "y": 256
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "http-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 401,
+          "width": 1082,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "http-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 501,
+          "width": 1222,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "logs",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 314,
+          "width": 886,
+          "x": 37,
+          "y": 256
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "logs",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 401,
+          "width": 1082,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "logs",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 501,
+          "width": 1222,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "logs",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 314,
+          "width": 886,
+          "x": 37,
+          "y": 256
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "logs",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 401,
+          "width": 1082,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "logs",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 501,
+          "width": 1222,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "containers",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 276,
+          "width": 886,
+          "x": 37,
+          "y": 294
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "containers",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 363,
+          "width": 1082,
+          "x": 49,
+          "y": 301
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "containers",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 463,
+          "width": 1222,
+          "x": 49,
+          "y": 301
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "containers",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 276,
+          "width": 886,
+          "x": 37,
+          "y": 294
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "containers",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 363,
+          "width": 1082,
+          "x": 49,
+          "y": 301
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "containers",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 463,
+          "width": 1222,
+          "x": 49,
+          "y": 301
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "triage-input",
+      "panes": {
+        "[aria-label=\"告警原文\"]": {
+          "bottom": 489,
+          "height": 227,
+          "width": 882,
+          "x": 39,
+          "y": 262
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "triage-input",
+      "panes": {
+        "[aria-label=\"告警原文\"]": {
+          "bottom": 585,
+          "height": 319,
+          "width": 1086,
+          "x": 47,
+          "y": 266
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "triage-input",
+      "panes": {
+        "[aria-label=\"告警原文\"]": {
+          "bottom": 685,
+          "height": 419,
+          "width": 1226,
+          "x": 47,
+          "y": 266
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "triage-input",
+      "panes": {
+        "[aria-label=\"告警原文\"]": {
+          "bottom": 489,
+          "height": 227,
+          "width": 882,
+          "x": 39,
+          "y": 262
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "triage-input",
+      "panes": {
+        "[aria-label=\"告警原文\"]": {
+          "bottom": 585,
+          "height": 319,
+          "width": 1086,
+          "x": 47,
+          "y": 266
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "triage-input",
+      "panes": {
+        "[aria-label=\"告警原文\"]": {
+          "bottom": 685,
+          "height": 419,
+          "width": 1226,
+          "x": 47,
+          "y": 266
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "triage-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 314,
+          "width": 886,
+          "x": 37,
+          "y": 256
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "triage-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 401,
+          "width": 1082,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "triage-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 501,
+          "width": 1222,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "triage-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 314,
+          "width": 886,
+          "x": 37,
+          "y": 256
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "triage-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 401,
+          "width": 1082,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "triage-result",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 501,
+          "width": 1222,
+          "x": 49,
+          "y": 263
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "webshell",
+      "panes": {
+        ".webshell-code": {
+          "bottom": 588,
+          "height": 180,
+          "width": 700,
+          "x": 210,
+          "y": 408
+        },
+        ".webshell-grid": {
+          "bottom": 526,
+          "height": 222,
+          "width": 886,
+          "x": 37,
+          "y": 304
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "webshell",
+      "panes": {
+        ".webshell-code": {
+          "bottom": 603,
+          "height": 180,
+          "width": 776,
+          "x": 332,
+          "y": 423
+        },
+        ".webshell-grid": {
+          "bottom": 620,
+          "height": 309,
+          "width": 1082,
+          "x": 49,
+          "y": 311
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "webshell",
+      "panes": {
+        ".webshell-code": {
+          "bottom": 603,
+          "height": 180,
+          "width": 916,
+          "x": 332,
+          "y": 423
+        },
+        ".webshell-grid": {
+          "bottom": 720,
+          "height": 409,
+          "width": 1222,
+          "x": 49,
+          "y": 311
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "webshell",
+      "panes": {
+        ".webshell-code": {
+          "bottom": 588,
+          "height": 180,
+          "width": 700,
+          "x": 210,
+          "y": 408
+        },
+        ".webshell-grid": {
+          "bottom": 526,
+          "height": 222,
+          "width": 886,
+          "x": 37,
+          "y": 304
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "webshell",
+      "panes": {
+        ".webshell-code": {
+          "bottom": 603,
+          "height": 180,
+          "width": 776,
+          "x": 332,
+          "y": 423
+        },
+        ".webshell-grid": {
+          "bottom": 620,
+          "height": 309,
+          "width": 1082,
+          "x": 49,
+          "y": 311
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "webshell",
+      "panes": {
+        ".webshell-code": {
+          "bottom": 603,
+          "height": 180,
+          "width": 916,
+          "x": 332,
+          "y": 423
+        },
+        ".webshell-grid": {
+          "bottom": 720,
+          "height": 409,
+          "width": 1222,
+          "x": 49,
+          "y": 311
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "binary",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 266,
+          "width": 886,
+          "x": 37,
+          "y": 304
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "binary",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 353,
+          "width": 1082,
+          "x": 49,
+          "y": 311
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "binary",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 453,
+          "width": 1222,
+          "x": 49,
+          "y": 311
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "binary",
+      "panes": {
+        ".result-content": {
+          "bottom": 570,
+          "height": 266,
+          "width": 886,
+          "x": 37,
+          "y": 304
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "binary",
+      "panes": {
+        ".result-content": {
+          "bottom": 664,
+          "height": 353,
+          "width": 1082,
+          "x": 49,
+          "y": 311
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "binary",
+      "panes": {
+        ".result-content": {
+          "bottom": 764,
+          "height": 453,
+          "width": 1222,
+          "x": 49,
+          "y": 311
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "response-receipt",
+      "panes": {
+        ".response-action-editor": {
+          "bottom": 596.59375,
+          "height": 565.1875,
+          "width": 910,
+          "x": 25,
+          "y": 31.40625
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "response-receipt",
+      "panes": {
+        ".response-action-editor": {
+          "bottom": 657.546875,
+          "height": 587.09375,
+          "width": 920,
+          "x": 130,
+          "y": 70.453125
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "response-receipt",
+      "panes": {
+        ".response-action-editor": {
+          "bottom": 707.546875,
+          "height": 587.09375,
+          "width": 920,
+          "x": 200,
+          "y": 120.453125
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "response-receipt",
+      "panes": {
+        ".response-action-editor": {
+          "bottom": 596.59375,
+          "height": 565.1875,
+          "width": 910,
+          "x": 25,
+          "y": 31.40625
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "response-receipt",
+      "panes": {
+        ".response-action-editor": {
+          "bottom": 657.546875,
+          "height": 587.09375,
+          "width": 920,
+          "x": 130,
+          "y": 70.453125
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "response-receipt",
+      "panes": {
+        ".response-action-editor": {
+          "bottom": 707.546875,
+          "height": 587.09375,
+          "width": 920,
+          "x": 200,
+          "y": 120.453125
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "report-center",
+      "panes": {
+        ".report-home-intro": {
+          "bottom": 353,
+          "height": 135,
+          "width": 912,
+          "x": 24,
+          "y": 218
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "report-center",
+      "panes": {
+        ".report-home-intro": {
+          "bottom": 374,
+          "height": 150,
+          "width": 1056,
+          "x": 62,
+          "y": 224
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "report-center",
+      "panes": {
+        ".report-home-intro": {
+          "bottom": 374,
+          "height": 150,
+          "width": 1056,
+          "x": 132,
+          "y": 224
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "report-center",
+      "panes": {
+        ".report-home-intro": {
+          "bottom": 353,
+          "height": 135,
+          "width": 912,
+          "x": 24,
+          "y": 218
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "report-center",
+      "panes": {
+        ".report-home-intro": {
+          "bottom": 374,
+          "height": 150,
+          "width": 1056,
+          "x": 62,
+          "y": 224
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "report-center",
+      "panes": {
+        ".report-home-intro": {
+          "bottom": 374,
+          "height": 150,
+          "width": 1056,
+          "x": 132,
+          "y": 224
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "report-editor",
+      "panes": {
+        ".report-writing-layout": {
+          "bottom": 628,
+          "height": 470,
+          "width": 960,
+          "x": 0,
+          "y": 158
+        }
+      },
+      "theme": "light",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "report-editor",
+      "panes": {
+        ".report-writing-layout": {
+          "bottom": 728,
+          "height": 570,
+          "width": 1180,
+          "x": 0,
+          "y": 158
+        }
+      },
+      "theme": "light",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "report-editor",
+      "panes": {
+        ".report-writing-layout": {
+          "bottom": 828,
+          "height": 670,
+          "width": 1320,
+          "x": 0,
+          "y": 158
+        }
+      },
+      "theme": "light",
+      "width": 1320
+    },
+    {
+      "height": 660,
+      "module": "report-editor",
+      "panes": {
+        ".report-writing-layout": {
+          "bottom": 628,
+          "height": 470,
+          "width": 960,
+          "x": 0,
+          "y": 158
+        }
+      },
+      "theme": "dark",
+      "width": 960
+    },
+    {
+      "height": 760,
+      "module": "report-editor",
+      "panes": {
+        ".report-writing-layout": {
+          "bottom": 728,
+          "height": 570,
+          "width": 1180,
+          "x": 0,
+          "y": 158
+        }
+      },
+      "theme": "dark",
+      "width": 1180
+    },
+    {
+      "height": 860,
+      "module": "report-editor",
+      "panes": {
+        ".report-writing-layout": {
+          "bottom": 828,
+          "height": 670,
+          "width": 1320,
+          "x": 0,
+          "y": 158
+        }
+      },
+      "theme": "dark",
+      "width": 1320
+    }
+  ],
+  "passed": [
+    "Log scanner ingests actual fixture",
+    "http-input light 960: [aria-label=\"HTTP 请求包\"] fits window {\"rect\":{\"x\":39,\"y\":262,\"width\":429,\"height\":229,\"bottom\":491},\"scrollWidth\":427,\"clientWidth\":427}",
+    "http-input light 960: [aria-label=\"HTTP 响应包\"] fits window {\"rect\":{\"x\":492,\"y\":262,\"width\":429,\"height\":229,\"bottom\":491},\"scrollWidth\":427,\"clientWidth\":427}",
+    "http-input light 960: no document overflow",
+    "http-input light 1180: [aria-label=\"HTTP 请求包\"] fits window {\"rect\":{\"x\":47,\"y\":266,\"width\":531,\"height\":321,\"bottom\":587},\"scrollWidth\":529,\"clientWidth\":529}",
+    "http-input light 1180: [aria-label=\"HTTP 响应包\"] fits window {\"rect\":{\"x\":602,\"y\":266,\"width\":531,\"height\":321,\"bottom\":587},\"scrollWidth\":529,\"clientWidth\":529}",
+    "http-input light 1180: no document overflow",
+    "http-input light 1320: [aria-label=\"HTTP 请求包\"] fits window {\"rect\":{\"x\":47,\"y\":266,\"width\":601,\"height\":421,\"bottom\":687},\"scrollWidth\":599,\"clientWidth\":599}",
+    "http-input light 1320: [aria-label=\"HTTP 响应包\"] fits window {\"rect\":{\"x\":672,\"y\":266,\"width\":601,\"height\":421,\"bottom\":687},\"scrollWidth\":599,\"clientWidth\":599}",
+    "http-input light 1320: no document overflow",
+    "http-input dark 960: [aria-label=\"HTTP 请求包\"] fits window {\"rect\":{\"x\":39,\"y\":262,\"width\":429,\"height\":229,\"bottom\":491},\"scrollWidth\":427,\"clientWidth\":427}",
+    "http-input dark 960: [aria-label=\"HTTP 响应包\"] fits window {\"rect\":{\"x\":492,\"y\":262,\"width\":429,\"height\":229,\"bottom\":491},\"scrollWidth\":427,\"clientWidth\":427}",
+    "http-input dark 960: no document overflow",
+    "http-input dark 1180: [aria-label=\"HTTP 请求包\"] fits window {\"rect\":{\"x\":47,\"y\":266,\"width\":531,\"height\":321,\"bottom\":587},\"scrollWidth\":529,\"clientWidth\":529}",
+    "http-input dark 1180: [aria-label=\"HTTP 响应包\"] fits window {\"rect\":{\"x\":602,\"y\":266,\"width\":531,\"height\":321,\"bottom\":587},\"scrollWidth\":529,\"clientWidth\":529}",
+    "http-input dark 1180: no document overflow",
+    "http-input dark 1320: [aria-label=\"HTTP 请求包\"] fits window {\"rect\":{\"x\":47,\"y\":266,\"width\":601,\"height\":421,\"bottom\":687},\"scrollWidth\":599,\"clientWidth\":599}",
+    "http-input dark 1320: [aria-label=\"HTTP 响应包\"] fits window {\"rect\":{\"x\":672,\"y\":266,\"width\":601,\"height\":421,\"bottom\":687},\"scrollWidth\":599,\"clientWidth\":599}",
+    "http-input dark 1320: no document overflow",
+    "http-expanded light 960: .text-editor-focus fits window {\"rect\":{\"x\":25,\"y\":16,\"width\":910,\"height\":596,\"bottom\":612},\"scrollWidth\":908,\"clientWidth\":908}",
+    "http-expanded light 960: no document overflow",
+    "http-expanded light 1180: .text-editor-focus fits window {\"rect\":{\"x\":25,\"y\":32,\"width\":1130,\"height\":664,\"bottom\":696},\"scrollWidth\":1128,\"clientWidth\":1128}",
+    "http-expanded light 1180: no document overflow",
+    "http-expanded light 1320: .text-editor-focus fits window {\"rect\":{\"x\":25,\"y\":32,\"width\":1270,\"height\":764,\"bottom\":796},\"scrollWidth\":1268,\"clientWidth\":1268}",
+    "http-expanded light 1320: no document overflow",
+    "http-expanded dark 960: .text-editor-focus fits window {\"rect\":{\"x\":25,\"y\":16,\"width\":910,\"height\":596,\"bottom\":612},\"scrollWidth\":908,\"clientWidth\":908}",
+    "http-expanded dark 960: no document overflow",
+    "http-expanded dark 1180: .text-editor-focus fits window {\"rect\":{\"x\":25,\"y\":32,\"width\":1130,\"height\":664,\"bottom\":696},\"scrollWidth\":1128,\"clientWidth\":1128}",
+    "http-expanded dark 1180: no document overflow",
+    "http-expanded dark 1320: .text-editor-focus fits window {\"rect\":{\"x\":25,\"y\":32,\"width\":1270,\"height\":764,\"bottom\":796},\"scrollWidth\":1268,\"clientWidth\":1268}",
+    "http-expanded dark 1320: no document overflow",
+    "Expanded packet input synchronizes long multiline text without submitting analysis",
+    "Returning from expanded editing retains text and restores the original caret target",
+    "HTTP request and response really persist as paired evidence",
+    "Source library is collapsed by default",
+    "Source library can be opened and its file is reachable",
+    "http-result light 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":256,\"width\":886,\"height\":314,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "http-result light 960: no document overflow",
+    "http-result light 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1082,\"height\":401,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "http-result light 1180: no document overflow",
+    "http-result light 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1222,\"height\":501,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "http-result light 1320: no document overflow",
+    "http-result dark 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":256,\"width\":886,\"height\":314,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "http-result dark 960: no document overflow",
+    "http-result dark 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1082,\"height\":401,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "http-result dark 1180: no document overflow",
+    "http-result dark 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1222,\"height\":501,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "http-result dark 1320: no document overflow",
+    "logs light 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":256,\"width\":886,\"height\":314,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "logs light 960: no document overflow",
+    "logs light 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1082,\"height\":401,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "logs light 1180: no document overflow",
+    "logs light 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1222,\"height\":501,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "logs light 1320: no document overflow",
+    "logs dark 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":256,\"width\":886,\"height\":314,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "logs dark 960: no document overflow",
+    "logs dark 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1082,\"height\":401,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "logs dark 1180: no document overflow",
+    "logs dark 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1222,\"height\":501,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "logs dark 1320: no document overflow",
+    "Log AI action remains reachable at every desktop size",
+    "containers light 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":294,\"width\":886,\"height\":276,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "containers light 960: no document overflow",
+    "containers light 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":301,\"width\":1082,\"height\":363,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "containers light 1180: no document overflow",
+    "containers light 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":301,\"width\":1222,\"height\":463,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "containers light 1320: no document overflow",
+    "containers dark 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":294,\"width\":886,\"height\":276,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "containers dark 960: no document overflow",
+    "containers dark 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":301,\"width\":1082,\"height\":363,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "containers dark 1180: no document overflow",
+    "containers dark 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":301,\"width\":1222,\"height\":463,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "containers dark 1320: no document overflow",
+    "triage-input light 960: [aria-label=\"告警原文\"] fits window {\"rect\":{\"x\":39,\"y\":262,\"width\":882,\"height\":227,\"bottom\":489},\"scrollWidth\":880,\"clientWidth\":880}",
+    "triage-input light 960: no document overflow",
+    "triage-input light 1180: [aria-label=\"告警原文\"] fits window {\"rect\":{\"x\":47,\"y\":266,\"width\":1086,\"height\":319,\"bottom\":585},\"scrollWidth\":1084,\"clientWidth\":1084}",
+    "triage-input light 1180: no document overflow",
+    "triage-input light 1320: [aria-label=\"告警原文\"] fits window {\"rect\":{\"x\":47,\"y\":266,\"width\":1226,\"height\":419,\"bottom\":685},\"scrollWidth\":1224,\"clientWidth\":1224}",
+    "triage-input light 1320: no document overflow",
+    "triage-input dark 960: [aria-label=\"告警原文\"] fits window {\"rect\":{\"x\":39,\"y\":262,\"width\":882,\"height\":227,\"bottom\":489},\"scrollWidth\":880,\"clientWidth\":880}",
+    "triage-input dark 960: no document overflow",
+    "triage-input dark 1180: [aria-label=\"告警原文\"] fits window {\"rect\":{\"x\":47,\"y\":266,\"width\":1086,\"height\":319,\"bottom\":585},\"scrollWidth\":1084,\"clientWidth\":1084}",
+    "triage-input dark 1180: no document overflow",
+    "triage-input dark 1320: [aria-label=\"告警原文\"] fits window {\"rect\":{\"x\":47,\"y\":266,\"width\":1226,\"height\":419,\"bottom\":685},\"scrollWidth\":1224,\"clientWidth\":1224}",
+    "triage-input dark 1320: no document overflow",
+    "triage-result light 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":256,\"width\":886,\"height\":314,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "triage-result light 960: no document overflow",
+    "triage-result light 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1082,\"height\":401,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "triage-result light 1180: no document overflow",
+    "triage-result light 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1222,\"height\":501,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "triage-result light 1320: no document overflow",
+    "triage-result dark 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":256,\"width\":886,\"height\":314,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "triage-result dark 960: no document overflow",
+    "triage-result dark 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1082,\"height\":401,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "triage-result dark 1180: no document overflow",
+    "triage-result dark 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":263,\"width\":1222,\"height\":501,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "triage-result dark 1320: no document overflow",
+    "webshell light 960: .webshell-grid fits window {\"rect\":{\"x\":37,\"y\":304,\"width\":886,\"height\":222,\"bottom\":526},\"scrollWidth\":884,\"clientWidth\":884}",
+    "webshell light 960: .webshell-code fits window {\"rect\":{\"x\":210,\"y\":408,\"width\":700,\"height\":180,\"bottom\":588},\"scrollWidth\":698,\"clientWidth\":698}",
+    "webshell light 960: no document overflow",
+    "webshell light 1180: .webshell-grid fits window {\"rect\":{\"x\":49,\"y\":311,\"width\":1082,\"height\":309,\"bottom\":620},\"scrollWidth\":1080,\"clientWidth\":1080}",
+    "webshell light 1180: .webshell-code fits window {\"rect\":{\"x\":332,\"y\":423,\"width\":776,\"height\":180,\"bottom\":603},\"scrollWidth\":774,\"clientWidth\":774}",
+    "webshell light 1180: no document overflow",
+    "webshell light 1320: .webshell-grid fits window {\"rect\":{\"x\":49,\"y\":311,\"width\":1222,\"height\":409,\"bottom\":720},\"scrollWidth\":1220,\"clientWidth\":1220}",
+    "webshell light 1320: .webshell-code fits window {\"rect\":{\"x\":332,\"y\":423,\"width\":916,\"height\":180,\"bottom\":603},\"scrollWidth\":914,\"clientWidth\":914}",
+    "webshell light 1320: no document overflow",
+    "webshell dark 960: .webshell-grid fits window {\"rect\":{\"x\":37,\"y\":304,\"width\":886,\"height\":222,\"bottom\":526},\"scrollWidth\":884,\"clientWidth\":884}",
+    "webshell dark 960: .webshell-code fits window {\"rect\":{\"x\":210,\"y\":408,\"width\":700,\"height\":180,\"bottom\":588},\"scrollWidth\":698,\"clientWidth\":698}",
+    "webshell dark 960: no document overflow",
+    "webshell dark 1180: .webshell-grid fits window {\"rect\":{\"x\":49,\"y\":311,\"width\":1082,\"height\":309,\"bottom\":620},\"scrollWidth\":1080,\"clientWidth\":1080}",
+    "webshell dark 1180: .webshell-code fits window {\"rect\":{\"x\":332,\"y\":423,\"width\":776,\"height\":180,\"bottom\":603},\"scrollWidth\":774,\"clientWidth\":774}",
+    "webshell dark 1180: no document overflow",
+    "webshell dark 1320: .webshell-grid fits window {\"rect\":{\"x\":49,\"y\":311,\"width\":1222,\"height\":409,\"bottom\":720},\"scrollWidth\":1220,\"clientWidth\":1220}",
+    "webshell dark 1320: .webshell-code fits window {\"rect\":{\"x\":332,\"y\":423,\"width\":916,\"height\":180,\"bottom\":603},\"scrollWidth\":914,\"clientWidth\":914}",
+    "webshell dark 1320: no document overflow",
+    "WebShell source has a useful reading height",
+    "binary light 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":304,\"width\":886,\"height\":266,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "binary light 960: no document overflow",
+    "binary light 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":311,\"width\":1082,\"height\":353,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "binary light 1180: no document overflow",
+    "binary light 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":311,\"width\":1222,\"height\":453,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "binary light 1320: no document overflow",
+    "binary dark 960: .result-content fits window {\"rect\":{\"x\":37,\"y\":304,\"width\":886,\"height\":266,\"bottom\":570},\"scrollWidth\":886,\"clientWidth\":886}",
+    "binary dark 960: no document overflow",
+    "binary dark 1180: .result-content fits window {\"rect\":{\"x\":49,\"y\":311,\"width\":1082,\"height\":353,\"bottom\":664},\"scrollWidth\":1082,\"clientWidth\":1082}",
+    "binary dark 1180: no document overflow",
+    "binary dark 1320: .result-content fits window {\"rect\":{\"x\":49,\"y\":311,\"width\":1222,\"height\":453,\"bottom\":764},\"scrollWidth\":1222,\"clientWidth\":1222}",
+    "binary dark 1320: no document overflow",
+    "Action description has a substantial multi-line writing area",
+    "Opening the receipt editor does not advance the recorded action",
+    "response-receipt light 960: long receipts use the available writing width",
+    "response-receipt light 960: .response-action-editor fits window {\"rect\":{\"x\":25,\"y\":31.40625,\"width\":910,\"height\":565.1875,\"bottom\":596.59375},\"scrollWidth\":908,\"clientWidth\":908}",
+    "response-receipt light 960: no document overflow",
+    "response-receipt light 1180: long receipts use the available writing width",
+    "response-receipt light 1180: .response-action-editor fits window {\"rect\":{\"x\":130,\"y\":70.453125,\"width\":920,\"height\":587.09375,\"bottom\":657.546875},\"scrollWidth\":918,\"clientWidth\":918}",
+    "response-receipt light 1180: no document overflow",
+    "response-receipt light 1320: long receipts use the available writing width",
+    "response-receipt light 1320: .response-action-editor fits window {\"rect\":{\"x\":200,\"y\":120.453125,\"width\":920,\"height\":587.09375,\"bottom\":707.546875},\"scrollWidth\":918,\"clientWidth\":918}",
+    "response-receipt light 1320: no document overflow",
+    "response-receipt dark 960: long receipts use the available writing width",
+    "response-receipt dark 960: .response-action-editor fits window {\"rect\":{\"x\":25,\"y\":31.40625,\"width\":910,\"height\":565.1875,\"bottom\":596.59375},\"scrollWidth\":908,\"clientWidth\":908}",
+    "response-receipt dark 960: no document overflow",
+    "response-receipt dark 1180: long receipts use the available writing width",
+    "response-receipt dark 1180: .response-action-editor fits window {\"rect\":{\"x\":130,\"y\":70.453125,\"width\":920,\"height\":587.09375,\"bottom\":657.546875},\"scrollWidth\":918,\"clientWidth\":918}",
+    "response-receipt dark 1180: no document overflow",
+    "response-receipt dark 1320: long receipts use the available writing width",
+    "response-receipt dark 1320: .response-action-editor fits window {\"rect\":{\"x\":200,\"y\":120.453125,\"width\":920,\"height\":587.09375,\"bottom\":707.546875},\"scrollWidth\":918,\"clientWidth\":918}",
+    "response-receipt dark 1320: no document overflow",
+    "Multi-line receipt and recovery verification persist through the visible forms",
+    "Reports open in their own center",
+    "report-center light 960: .report-home-intro fits window {\"rect\":{\"x\":24,\"y\":218,\"width\":912,\"height\":135,\"bottom\":353},\"scrollWidth\":910,\"clientWidth\":910}",
+    "report-center light 960: no document overflow",
+    "report-center light 1180: .report-home-intro fits window {\"rect\":{\"x\":62,\"y\":224,\"width\":1056,\"height\":150,\"bottom\":374},\"scrollWidth\":1054,\"clientWidth\":1054}",
+    "report-center light 1180: no document overflow",
+    "report-center light 1320: .report-home-intro fits window {\"rect\":{\"x\":132,\"y\":224,\"width\":1056,\"height\":150,\"bottom\":374},\"scrollWidth\":1054,\"clientWidth\":1054}",
+    "report-center light 1320: no document overflow",
+    "report-center dark 960: .report-home-intro fits window {\"rect\":{\"x\":24,\"y\":218,\"width\":912,\"height\":135,\"bottom\":353},\"scrollWidth\":910,\"clientWidth\":910}",
+    "report-center dark 960: no document overflow",
+    "report-center dark 1180: .report-home-intro fits window {\"rect\":{\"x\":62,\"y\":224,\"width\":1056,\"height\":150,\"bottom\":374},\"scrollWidth\":1054,\"clientWidth\":1054}",
+    "report-center dark 1180: no document overflow",
+    "report-center dark 1320: .report-home-intro fits window {\"rect\":{\"x\":132,\"y\":224,\"width\":1056,\"height\":150,\"bottom\":374},\"scrollWidth\":1054,\"clientWidth\":1054}",
+    "report-center dark 1320: no document overflow",
+    "report-editor light 960: .report-writing-layout fits window {\"rect\":{\"x\":0,\"y\":158,\"width\":960,\"height\":470,\"bottom\":628},\"scrollWidth\":960,\"clientWidth\":960}",
+    "report-editor light 960: no document overflow",
+    "report-editor light 1180: .report-writing-layout fits window {\"rect\":{\"x\":0,\"y\":158,\"width\":1180,\"height\":570,\"bottom\":728},\"scrollWidth\":1180,\"clientWidth\":1180}",
+    "report-editor light 1180: no document overflow",
+    "report-editor light 1320: .report-writing-layout fits window {\"rect\":{\"x\":0,\"y\":158,\"width\":1320,\"height\":670,\"bottom\":828},\"scrollWidth\":1320,\"clientWidth\":1320}",
+    "report-editor light 1320: no document overflow",
+    "report-editor dark 960: .report-writing-layout fits window {\"rect\":{\"x\":0,\"y\":158,\"width\":960,\"height\":470,\"bottom\":628},\"scrollWidth\":960,\"clientWidth\":960}",
+    "report-editor dark 960: no document overflow",
+    "report-editor dark 1180: .report-writing-layout fits window {\"rect\":{\"x\":0,\"y\":158,\"width\":1180,\"height\":570,\"bottom\":728},\"scrollWidth\":1180,\"clientWidth\":1180}",
+    "report-editor dark 1180: no document overflow",
+    "report-editor dark 1320: .report-writing-layout fits window {\"rect\":{\"x\":0,\"y\":158,\"width\":1320,\"height\":670,\"bottom\":828},\"scrollWidth\":1320,\"clientWidth\":1320}",
+    "report-editor dark 1320: no document overflow",
+    "Report summaries are large by default",
+    "HTML, PDF and DOCX are discoverable in a dedicated delivery dialog",
+    "New whitelist and blacklist rules default to global scope",
+    "Global rules follow an independent event",
+    "Real Baidu GET has successful status, hash and archived evidence",
+    "Baidu navigation stub is explicitly partial coverage",
+    "Monitor history renders only the selected snapshot",
+    "Pasted screenshot is archived with URL, snapshot and source digest",
+    "Actual report HTML includes source digest and screenshot",
+    "Module transitions do not send stale evidence to specialized analysis APIs"
+  ],
+  "publicWebsite": "https://www.baidu.com/",
+  "samplesExecuted": false,
+  "secondCase": "18752874-9ab0-45fc-8cb7-20ff8366653d",
+  "synthetic": true,
+  "version": "0.10.1"
+}

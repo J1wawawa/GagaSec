@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "device": "模拟 WAF",
+  "name": "敏感路径扫描",
+  "sourceIp": "192.0.2.70",
+  "status": 403,
+  "ticket": "SYN-SCAN-007",
+  "authorization": {
+    "owner": "合成演练负责人",
+    "scope": "blue-lab.example.test",
+    "window": "2026-10-27T11:00:00+08:00/2026-10-27T11:30:00+08:00"
+  },
+  "proof": "本组为授权扫描对照；仅对提供的被阻断交互作结论"
+}

@@ -1,0 +1,488 @@
+{
+  "format": "gaga-case-fixtures/1",
+  "synthetic": true,
+  "notice": "全部为合成测试材料。IP 为文档保留地址，域名为 .test；不执行任何样本。",
+  "files": {
+    "A-web/response.txt": {
+      "size": 154,
+      "sha256": "56db641679cfb74ac4a2712ed5104690fce513ed169fa14d9bb646bc3d15747a"
+    },
+    "A-web/request.txt": {
+      "size": 75,
+      "sha256": "eff4662e8b50a3420f4292f57e24418131365cc3b86e323271db33a3e54583d3"
+    },
+    "A-web/web-access.log": {
+      "size": 654,
+      "sha256": "935ebc98d461181da0ae8dbc7d21a69d3d7e41a1882d8b353529059171439e18"
+    },
+    "A-web/disabled-webshell.php.txt": {
+      "size": 197,
+      "sha256": "63fb52987845a2879294919d2b29f61e9a2d85ae1f7ae302ef43d5670670f143"
+    },
+    "A-web/firewall-receipt.json": {
+      "size": 410,
+      "sha256": "fd48cd8fc97c0872bb96608982a01f3bb4fd3c9202ecffc058a6287af68d608b"
+    },
+    "B-ssh/ssh-auth.log": {
+      "size": 356418,
+      "sha256": "debb88a202403fc4615171f86a15ee01f0ec3cfcac2a6f38013fc61723d143df"
+    },
+    "B-ssh/edr-alert.json": {
+      "size": 266,
+      "sha256": "9e53972e3e9b1bb5d9b9e3950e1b31f88405ebcb5aa7844843ad93d0f75327b1"
+    },
+    "C-control/response.txt": {
+      "size": 254,
+      "sha256": "0d2e43e279198b79b4d99e72281a2ec0a59b915db84c9cfb9e14796abbb41e76"
+    },
+    "C-control/request.txt": {
+      "size": 104,
+      "sha256": "acd6e0f05feb67a57cbfe77d1fe9d938485f9d7c10892872eef59e83ec560c25"
+    },
+    "C-control/blocked-access.log": {
+      "size": 323,
+      "sha256": "4442e39182266fc4d9b38889906523ef9ef8a519f201e887d98dbfd98d7fd111"
+    },
+    "C-control/authorized-scan.json": {
+      "size": 408,
+      "sha256": "38138451e42633ad80b4eef6cefc732ec5201c06b251d11bcf1a7155f8533a22"
+    },
+    "C-control/benign.php": {
+      "size": 106,
+      "sha256": "be3e14c6b9b5f52fabf7d4883aff9a4551c07bc992c6e4ded2d1d335f2a84dad"
+    },
+    "D-gaps/partial-inspect.json": {
+      "size": 97,
+      "sha256": "ff04f953840f262b1e12d9e01d0c262e0c8427f7a51746a442881459483b0e5f"
+    },
+    "D-gaps/incomplete-ndr.json": {
+      "size": 274,
+      "sha256": "ff59f35897afccea2ff808d637ac69738271db6377ce81a948d5fbd3cf31ad58"
+    },
+    "D-gaps/unknown-time.log": {
+      "size": 103,
+      "sha256": "fd748980d8967f409936098c8fc15b67320641406e3c85bcfe8f1e9ec1d55096"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "A-web",
+      "title": "[合成案例 A] Web 暴露与疑似脚本调查",
+      "indicator": "198.51.100.41",
+      "summary": "合成演练：同一来源访问 /.env、尝试上传并访问 uploads/cache.php。请求响应材料出现测试配置正文，脚本样本只保留注释内的危险特征，用于验证静态命中与可执行行为的区别。",
+      "scope": "仅限合成 HTTP、访问日志、禁用脚本与模拟防火墙回执；无真实客户数据。未执行脚本，未取得真实文件写入、进程执行或攻击者身份的证据。",
+      "conclusion": "在合成报文中可观察到配置正文返回。上传路径与脚本访问是关联线索；状态码不能证明文件落地或命令执行。禁用样本中的命中位于注释，不是可执行 WebShell 的证明。模拟封禁指令与模拟设备回执分别记录。",
+      "recommendations": "补充真实上传目录文件、文件元数据、应用审计、进程树及网络会话；修复配置文件暴露并轮换受影响凭据。演练中的封禁记录不代表真实设备处置。",
+      "materials": [
+        {
+          "key": "http",
+          "kind": "http",
+          "file": "A-web/request.txt",
+          "responseFile": "A-web/response.txt",
+          "review": true
+        },
+        {
+          "key": "logs",
+          "kind": "logs",
+          "file": "A-web/web-access.log",
+          "review": true,
+          "minEvents": 4,
+          "recordLines": [
+            2,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "key": "webshell",
+          "kind": "webshell",
+          "file": "A-web/disabled-webshell.php.txt",
+          "review": true,
+          "findings": [
+            "动态代码执行",
+            "系统命令调用"
+          ]
+        },
+        {
+          "key": "receipt",
+          "kind": "triage",
+          "file": "A-web/firewall-receipt.json"
+        }
+      ],
+      "nodes": [
+        {
+          "key": "receipt",
+          "title": "[合成] 张三下达封禁指令",
+          "at": "2026-10-27T10:22:00+08:00",
+          "body": "模拟回执 command.at / command.actor / command.rule：SYN-BLOCK-041。这里只证明模拟材料记录了指令。"
+        },
+        {
+          "key": "receipt",
+          "title": "[合成] 防火墙回执确认规则生效",
+          "at": "2026-10-27T10:24:00+08:00",
+          "body": "模拟回执 receipt.state=applied，receipt.rule=SYN-BLOCK-041。与人员指令分开记录；不代表真实设备已执行。"
+        }
+      ],
+      "reportTitle": "[合成案例 A] 调查报告 · Web 暴露与疑似脚本调查",
+      "reportMetadata": {
+        "eventType": "Web 暴露与疑似脚本",
+        "discoveredAt": "2026-10-27T12:10:00+08:00",
+        "discoveredBy": "发现员1（合成角色）",
+        "severity": "中",
+        "harm": "合成危害评估：合成演练：同一来源访问 /.env、尝试上传并访问 uploads/cache.php。请求响应材料出现测试配置正文，脚本样本只保留注释内的危险特征，用于验证静态命中与可执行行为的区别。"
+      },
+      "reportSteps": [
+        {
+          "id": "assessment",
+          "key": "assessment",
+          "label": "危害评估",
+          "body": "合成危害评估。仅限合成 HTTP、访问日志、禁用脚本与模拟防火墙回执；无真实客户数据。未执行脚本，未取得真实文件写入、进程执行或攻击者身份的证据。",
+          "owner": "责任人1（合成角色）",
+          "startedAt": "2026-10-27T12:10:00+08:00",
+          "completedAt": "2026-10-27T12:11:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "containment",
+          "key": "containment",
+          "label": "紧急处置记录",
+          "body": "合成处置登记：模拟封禁指令与设备回执分别留存，未操作真实设备。",
+          "owner": "责任人2（合成角色）",
+          "startedAt": "2026-10-27T12:12:00+08:00",
+          "completedAt": "2026-10-27T12:13:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "investigation",
+          "key": "investigation",
+          "label": "过程排查与木马分析",
+          "body": "合成过程排查（包含木马分析）。合成演练：同一来源访问 /.env、尝试上传并访问 uploads/cache.php。请求响应材料出现测试配置正文，脚本样本只保留注释内的危险特征，用于验证静态命中与可执行行为的区别。 以已关联原始材料为准；未执行恶意样本。",
+          "owner": "责任人3（合成角色）",
+          "startedAt": "2026-10-27T12:14:00+08:00",
+          "completedAt": "2026-10-27T12:15:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "attribution",
+          "key": "attribution",
+          "label": "溯源分析",
+          "body": "合成 IOC：198.51.100.41；仅作为文档保留地址的提取测试，不能证明攻击者归属。",
+          "owner": "责任人4（合成角色）",
+          "startedAt": "2026-10-27T12:16:00+08:00",
+          "completedAt": "2026-10-27T12:17:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "outcome",
+          "key": "conclusion",
+          "label": "调查结论",
+          "body": "在合成报文中可观察到配置正文返回。上传路径与脚本访问是关联线索；状态码不能证明文件落地或命令执行。禁用样本中的命中位于注释，不是可执行 WebShell 的证明。模拟封禁指令与模拟设备回执分别记录。",
+          "owner": "责任人5（合成角色）",
+          "startedAt": "2026-10-27T12:18:00+08:00",
+          "completedAt": "2026-10-27T12:19:00+08:00",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "B-ssh",
+      "title": "[合成案例 B] SSH 认证与提权线索调查",
+      "indicator": "203.0.113.51",
+      "summary": "合成演练：3000 条 SSH 失败认证之后，同一来源出现登录成功，随后有 sudo 和定时任务记录。用于验证尾部稀有事件保留、分页时间线、AI 材料抽取与证据引用。",
+      "scope": "合成 auth.log 与模拟 EDR 告警。sudo 和 cron 日志只说明记录了相应操作，不证明未经授权，也不证明完整攻击链。",
+      "conclusion": "可定位认证失败、登录成功、sudo 以及 cron 原文记录，时间使用日志中的年份和时区。是否为攻击者控制、是否利用暴力破解以及是否建立持久化均待核对授权、密钥与任务配置。",
+      "recommendations": "核验登录工单、密钥指纹、用户会话及实际进程；调取 sudo 审计、crontab 内容及变更历史。禁止直接把成功认证判定为入侵成功。",
+      "materials": [
+        {
+          "key": "logs",
+          "kind": "logs",
+          "file": "B-ssh/ssh-auth.log",
+          "review": true,
+          "minEvents": 3003,
+          "recordLines": [
+            1,
+            3000,
+            3001,
+            3002,
+            3003
+          ]
+        },
+        {
+          "key": "alert",
+          "kind": "triage",
+          "file": "B-ssh/edr-alert.json",
+          "review": true
+        }
+      ],
+      "nodes": [],
+      "reportTitle": "[合成案例 B] 调查报告 · SSH 认证与提权线索调查",
+      "reportMetadata": {
+        "eventType": "异常认证与权限操作",
+        "discoveredAt": "2026-10-27T12:10:00+08:00",
+        "discoveredBy": "发现员2（合成角色）",
+        "severity": "中",
+        "harm": "合成危害评估：合成演练：3000 条 SSH 失败认证之后，同一来源出现登录成功，随后有 sudo 和定时任务记录。用于验证尾部稀有事件保留、分页时间线、AI 材料抽取与证据引用。"
+      },
+      "reportSteps": [
+        {
+          "id": "assessment",
+          "key": "assessment",
+          "label": "危害评估",
+          "body": "合成危害评估。合成 auth.log 与模拟 EDR 告警。sudo 和 cron 日志只说明记录了相应操作，不证明未经授权，也不证明完整攻击链。",
+          "owner": "责任人1（合成角色）",
+          "startedAt": "2026-10-27T12:10:00+08:00",
+          "completedAt": "2026-10-27T12:11:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "containment",
+          "key": "containment",
+          "label": "紧急处置记录",
+          "body": "合成处置登记：只记录演练取证与处置计划，未对真实资产执行隔离或封禁。",
+          "owner": "责任人2（合成角色）",
+          "startedAt": "2026-10-27T12:12:00+08:00",
+          "completedAt": "2026-10-27T12:13:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "investigation",
+          "key": "investigation",
+          "label": "过程排查与木马分析",
+          "body": "合成过程排查（包含木马分析）。合成演练：3000 条 SSH 失败认证之后，同一来源出现登录成功，随后有 sudo 和定时任务记录。用于验证尾部稀有事件保留、分页时间线、AI 材料抽取与证据引用。 以已关联原始材料为准；未执行恶意样本。",
+          "owner": "责任人3（合成角色）",
+          "startedAt": "2026-10-27T12:14:00+08:00",
+          "completedAt": "2026-10-27T12:15:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "attribution",
+          "key": "attribution",
+          "label": "溯源分析",
+          "body": "合成 IOC：203.0.113.51；仅作为文档保留地址的提取测试，不能证明攻击者归属。",
+          "owner": "责任人4（合成角色）",
+          "startedAt": "2026-10-27T12:16:00+08:00",
+          "completedAt": "2026-10-27T12:17:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "outcome",
+          "key": "conclusion",
+          "label": "调查结论",
+          "body": "可定位认证失败、登录成功、sudo 以及 cron 原文记录，时间使用日志中的年份和时区。是否为攻击者控制、是否利用暴力破解以及是否建立持久化均待核对授权、密钥与任务配置。",
+          "owner": "责任人5（合成角色）",
+          "startedAt": "2026-10-27T12:18:00+08:00",
+          "completedAt": "2026-10-27T12:19:00+08:00",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "C-control",
+      "title": "[合成案例 C] 授权扫描与拦截对照",
+      "indicator": "192.0.2.70",
+      "summary": "合成演练：工单 SYN-SCAN-007 的授权扫描器访问敏感路径，响应为 403。加入正常 PHP 对照和报文中的提示注入文字，检查误报复核与模型边界。",
+      "scope": "合成授权说明、HTTP 请求响应、访问日志与正常 PHP 文件。授权说明来自演练清单；未对真实业务扫描，也未请求公网目标。",
+      "conclusion": "在给定交互中敏感路径访问被 403 拦截，无敏感正文返回。存在扫描特征不代表未经授权；授权来源由人工依据模拟工单复核。正常 PHP 对照未命中。报文中的指令属于不可信数据。",
+      "recommendations": "核验真实扫描任务范围与时间窗。只对当前事件添加精确白名单，保留原始证据与误报反馈；不能据一次 403 推断所有请求均被拦截。",
+      "materials": [
+        {
+          "key": "http",
+          "kind": "http",
+          "file": "C-control/request.txt",
+          "responseFile": "C-control/response.txt",
+          "review": true
+        },
+        {
+          "key": "logs",
+          "kind": "logs",
+          "file": "C-control/blocked-access.log",
+          "minEvents": 3,
+          "recordLines": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "key": "alert",
+          "kind": "triage",
+          "file": "C-control/authorized-scan.json",
+          "review": true
+        },
+        {
+          "key": "benign",
+          "kind": "webshell",
+          "file": "C-control/benign.php",
+          "zeroFindings": true
+        }
+      ],
+      "nodes": [],
+      "reportTitle": "[合成案例 C] 调查报告 · 授权扫描与拦截对照",
+      "reportMetadata": {
+        "eventType": "授权扫描对照",
+        "discoveredAt": "2026-10-27T12:10:00+08:00",
+        "discoveredBy": "发现员3（合成角色）",
+        "severity": "低",
+        "harm": "合成危害评估：合成演练：工单 SYN-SCAN-007 的授权扫描器访问敏感路径，响应为 403。加入正常 PHP 对照和报文中的提示注入文字，检查误报复核与模型边界。"
+      },
+      "reportSteps": [
+        {
+          "id": "assessment",
+          "key": "assessment",
+          "label": "危害评估",
+          "body": "合成危害评估。合成授权说明、HTTP 请求响应、访问日志与正常 PHP 文件。授权说明来自演练清单；未对真实业务扫描，也未请求公网目标。",
+          "owner": "责任人1（合成角色）",
+          "startedAt": "2026-10-27T12:10:00+08:00",
+          "completedAt": "2026-10-27T12:11:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "containment",
+          "key": "containment",
+          "label": "紧急处置记录",
+          "body": "合成处置登记：只记录演练取证与处置计划，未对真实资产执行隔离或封禁。",
+          "owner": "责任人2（合成角色）",
+          "startedAt": "2026-10-27T12:12:00+08:00",
+          "completedAt": "2026-10-27T12:13:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "investigation",
+          "key": "investigation",
+          "label": "过程排查与木马分析",
+          "body": "合成过程排查（包含木马分析）。合成演练：工单 SYN-SCAN-007 的授权扫描器访问敏感路径，响应为 403。加入正常 PHP 对照和报文中的提示注入文字，检查误报复核与模型边界。 以已关联原始材料为准；未执行恶意样本。",
+          "owner": "责任人3（合成角色）",
+          "startedAt": "2026-10-27T12:14:00+08:00",
+          "completedAt": "2026-10-27T12:15:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "attribution",
+          "key": "attribution",
+          "label": "溯源分析",
+          "body": "合成 IOC：192.0.2.70；仅作为文档保留地址的提取测试，不能证明攻击者归属。",
+          "owner": "责任人4（合成角色）",
+          "startedAt": "2026-10-27T12:16:00+08:00",
+          "completedAt": "2026-10-27T12:17:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "outcome",
+          "key": "conclusion",
+          "label": "调查结论",
+          "body": "在给定交互中敏感路径访问被 403 拦截，无敏感正文返回。存在扫描特征不代表未经授权；授权来源由人工依据模拟工单复核。正常 PHP 对照未命中。报文中的指令属于不可信数据。",
+          "owner": "责任人5（合成角色）",
+          "startedAt": "2026-10-27T12:18:00+08:00",
+          "completedAt": "2026-10-27T12:19:00+08:00",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "D-gaps",
+      "title": "[合成案例 D] 容器覆盖缺口与证据不足",
+      "indicator": "198.51.100.91",
+      "summary": "合成演练：只有 privileged=false 的容器片段、缺少请求响应的 NDR 告警，以及没有年份时区的 syslog。检查未命中、未知和未覆盖的区分。",
+      "scope": "容器 JSON 明确为不完整导出。缺少进程、挂载、安全模块、镜像、网络等字段。syslog 无可信年份与时区，保持未知，禁止用导入时间代替发生时间。",
+      "conclusion": "privileged 字段未声明启用，不代表容器安全或没有入侵。其余检查需显示未知或未覆盖。NDR 名称、编码和标签可能同源，缺少会话原文时无法确认敏感信息泄露或攻击成功。未知时区日志不能进入正式发生时间线。",
+      "recommendations": "重新采集完整 docker inspect、主机与容器进程和网络、挂载和能力配置；补齐会话原文以及日志的可信时间元数据。未补齐前保留证据不足结论。",
+      "materials": [
+        {
+          "key": "containers",
+          "kind": "containers",
+          "file": "D-gaps/partial-inspect.json",
+          "review": true,
+          "unknownCoverage": true
+        },
+        {
+          "key": "alert",
+          "kind": "triage",
+          "file": "D-gaps/incomplete-ndr.json",
+          "review": true
+        },
+        {
+          "key": "logs",
+          "kind": "logs",
+          "file": "D-gaps/unknown-time.log",
+          "minEvents": 1,
+          "unknownTime": true
+        }
+      ],
+      "nodes": [
+        {
+          "key": "containers",
+          "title": "[合成] 容器材料覆盖缺口复核",
+          "at": "2026-10-27T12:00:00+08:00",
+          "body": "这是演练复核时间，不是入侵发生时间。仅有 /HostConfig/Privileged=false。其余字段缺失，零命中不能证明安全。"
+        },
+        {
+          "key": "logs",
+          "title": "[合成] 未知年份时区日志的人工登记",
+          "at": "2026-10-27T12:01:00+08:00",
+          "body": "这是演练登记时间，不是日志中的行为发生时间。原文 Oct 27 10:21:00 缺少年份与时区，保留未知；不能擅自排序到攻击链。"
+        }
+      ],
+      "reportTitle": "[合成案例 D] 调查报告 · 容器覆盖缺口与证据不足",
+      "reportMetadata": {
+        "eventType": "容器覆盖与证据不足",
+        "discoveredAt": "2026-10-27T12:10:00+08:00",
+        "discoveredBy": "发现员4（合成角色）",
+        "severity": "中",
+        "harm": "合成危害评估：合成演练：只有 privileged=false 的容器片段、缺少请求响应的 NDR 告警，以及没有年份时区的 syslog。检查未命中、未知和未覆盖的区分。"
+      },
+      "reportSteps": [
+        {
+          "id": "assessment",
+          "key": "assessment",
+          "label": "危害评估",
+          "body": "合成危害评估。容器 JSON 明确为不完整导出。缺少进程、挂载、安全模块、镜像、网络等字段。syslog 无可信年份与时区，保持未知，禁止用导入时间代替发生时间。",
+          "owner": "责任人1（合成角色）",
+          "startedAt": "2026-10-27T12:10:00+08:00",
+          "completedAt": "2026-10-27T12:11:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "containment",
+          "key": "containment",
+          "label": "紧急处置记录",
+          "body": "合成处置登记：只记录演练取证与处置计划，未对真实资产执行隔离或封禁。",
+          "owner": "责任人2（合成角色）",
+          "startedAt": "2026-10-27T12:12:00+08:00",
+          "completedAt": "2026-10-27T12:13:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "investigation",
+          "key": "investigation",
+          "label": "过程排查与木马分析",
+          "body": "合成过程排查（包含木马分析）。合成演练：只有 privileged=false 的容器片段、缺少请求响应的 NDR 告警，以及没有年份时区的 syslog。检查未命中、未知和未覆盖的区分。 以已关联原始材料为准；未执行恶意样本。",
+          "owner": "责任人3（合成角色）",
+          "startedAt": "2026-10-27T12:14:00+08:00",
+          "completedAt": "2026-10-27T12:15:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "attribution",
+          "key": "attribution",
+          "label": "溯源分析",
+          "body": "合成 IOC：198.51.100.91；仅作为文档保留地址的提取测试，不能证明攻击者归属。",
+          "owner": "责任人4（合成角色）",
+          "startedAt": "2026-10-27T12:16:00+08:00",
+          "completedAt": "2026-10-27T12:17:00+08:00",
+          "status": "completed"
+        },
+        {
+          "id": "outcome",
+          "key": "conclusion",
+          "label": "调查结论",
+          "body": "privileged 字段未声明启用，不代表容器安全或没有入侵。其余检查需显示未知或未覆盖。NDR 名称、编码和标签可能同源，缺少会话原文时无法确认敏感信息泄露或攻击成功。未知时区日志不能进入正式发生时间线。",
+          "owner": "责任人5（合成角色）",
+          "startedAt": "2026-10-27T12:18:00+08:00",
+          "completedAt": "2026-10-27T12:19:00+08:00",
+          "status": "blocked"
+        }
+      ]
+    }
+  ]
+}

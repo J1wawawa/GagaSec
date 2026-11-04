@@ -1,0 +1,172 @@
+.text-editor {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+  width: 100%;
+}
+.text-editor-heading,
+.text-editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.text-editor-heading {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.text-editor .text-editor-label {
+  display: block;
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.text-editor-actions {
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.text-editor .text-editor-expand {
+  min-height: 32px;
+  white-space: nowrap;
+}
+.text-editor-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.text-editor.text-editor > textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 180px;
+  max-height: none;
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--strong-line);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.85;
+  resize: vertical;
+  box-sizing: border-box;
+}
+.text-editor[data-size='large'] > textarea {
+  min-height: 260px;
+}
+.text-editor[data-size='document'] > textarea {
+  min-height: clamp(320px, 42vh, 540px);
+}
+.text-editor[data-size='fill'] {
+  flex: 1;
+  min-height: 0;
+}
+.text-editor[data-size='fill'] > textarea {
+  flex: 1;
+  resize: none;
+}
+.text-editor[data-code='true'] > textarea,
+.text-editor-focus[data-code='true'] > textarea {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 13px;
+  tab-size: 2;
+}
+.text-editor-count {
+  align-self: flex-end;
+  color: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.text-editor-focus {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: calc(100vw - 48px);
+  height: calc(100vh - 64px);
+  min-width: 0;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 18px 80px #0003;
+  box-sizing: border-box;
+}
+.text-editor-focus header,
+.text-editor-focus footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.text-editor-focus header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+.text-editor-focus header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.text-editor-focus > textarea {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  padding: 22px;
+  resize: none;
+  border: 1px solid var(--strong-line);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.9;
+  box-sizing: border-box;
+}
+.text-editor-focus footer {
+  color: var(--muted);
+  font-size: 12px;
+}
+.text-editor-focus footer small {
+  white-space: nowrap;
+}
+.modal > .text-editor {
+  margin-block: 18px;
+}
+.lan-composer .text-editor > textarea {
+  min-height: 100px;
+}
+.lan-composer .text-editor-label,
+.lan-composer .text-editor-count {
+  display: none;
+}
+.modal .text-editor .text-editor-label {
+  margin-bottom: 0;
+}
+.platform-columns[data-panel='asset-import'],
+.platform-columns[data-panel='intel-import'] {
+  grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+}
+@media (max-width: 1000px) {
+  .platform-columns[data-panel='asset-import'],
+  .platform-columns[data-panel='intel-import'] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-height: 700px) {
+  .text-editor-focus {
+    height: calc(100vh - 32px);
+    padding: 16px 20px;
+    gap: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .text-editor-focus {
+    width: calc(100vw - 24px);
+    padding: 16px;
+  }
+}

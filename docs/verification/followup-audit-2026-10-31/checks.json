@@ -1,0 +1,45 @@
+{
+  "rust": {
+    "passed": 170,
+    "ignored": 4,
+    "failed": 0
+  },
+  "uiStateAssertions": 25,
+  "clippyWarningsDenied": true,
+  "frontendBuild": true,
+  "sourceCheck": true,
+  "sourceCheckSelfTests": true,
+  "apiDocsCheck": true,
+  "tauriSecurityCheck": true,
+  "npmAudit": {
+    "client": "0 vulnerabilities",
+    "reverseWorker": "0 vulnerabilities",
+    "monitorBrowser": "0 vulnerabilities"
+  },
+  "nativeComfort": {
+    "passed": 148,
+    "layouts": 60,
+    "screenshots": 20
+  },
+  "monitor": {
+    "first": 21,
+    "reopen": 2,
+    "physical": 3
+  },
+  "report": {
+    "first": 32,
+    "reopen": 5,
+    "physical": 11
+  },
+  "realChromiumNetworkCases": 7,
+  "externalModelsCalled": false,
+  "testedNativePlatform": "macOS",
+  "githubWorkflowExecuted": false,
+  "testFixturesWrittenToUserWorkspace": false,
+  "publicBrowserCheck": {
+    "url": "https://www.baidu.com/",
+    "title": "百度一下，你就知道",
+    "screenshotBytes": 101219,
+    "navigationError": null
+  }
+}

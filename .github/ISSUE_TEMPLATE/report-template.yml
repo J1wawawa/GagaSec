@@ -1,0 +1,29 @@
+name: 报告结构与模板投稿
+description: 帮助复杂事件更清楚地表达事实、举证和处置
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 适用场景与当前问题
+    validations:
+      required: true
+  - type: textarea
+    id: outline
+    attributes:
+      label: 章节结构与字段说明
+      description: 提供可编辑文本，说明负责人、时间、状态和证据如何组织；当前报告支持两级、64 节。
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: 合成示例、验证方式与来源许可
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我有权按项目当前 LICENSE.txt 提交原创内容，示例不含客户材料或凭据。
+          required: true

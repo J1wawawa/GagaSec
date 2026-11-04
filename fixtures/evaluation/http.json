@@ -1,0 +1,12 @@
+[
+  {"id":"normal-health","class":"control","request":"GET /health HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"HTTP/1.1 200 OK\r\n\r\nhealthy","required":[],"forbidden":["敏感配置路径请求","路径穿越请求","疑似命令执行请求"]},
+  {"id":"normal-search","class":"control","request":"GET /search?q=security HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"HTTP/1.1 200 OK\r\n\r\nresults","required":[],"forbidden":["疑似 SQL 注入请求","疑似脚本注入请求"]},
+  {"id":"env-blocked","class":"candidate","request":"GET /.env HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"HTTP/1.1 403 Forbidden\r\n\r\n","required":["敏感配置路径请求"],"forbidden":["响应含敏感配置字段"]},
+  {"id":"env-soft-200","class":"candidate","request":"GET /.env HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"HTTP/1.1 200 OK\r\n\r\nnot found","required":["敏感配置路径请求"],"forbidden":["响应含敏感配置字段"]},
+  {"id":"double-encoded-traversal","class":"candidate","request":"GET /?file=%252e%252e%252fetc%252fpasswd HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"HTTP/1.1 403 Forbidden\r\n\r\n","required":["路径穿越请求"],"forbidden":[]},
+  {"id":"sql-delay","class":"candidate","request":"GET /?id=1%20or%201%3D1 HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"HTTP/1.1 500 Error\r\n\r\n","required":["疑似 SQL 注入请求"],"forbidden":[]},
+  {"id":"xss-reflection","class":"candidate","request":"GET /?q=%3Cscript%3Efixture%3C/script%3E HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"HTTP/1.1 200 OK\r\n\r\n<script>fixture</script>","required":["疑似脚本注入请求","响应回显可疑请求片段"],"forbidden":[]},
+  {"id":"response-missing","class":"candidate","request":"GET /.git/config HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"","required":["敏感配置路径请求"],"forbidden":[],"missingResponse":true},
+  {"id":"bad-request","class":"malformed","request":"this is not HTTP","response":"","required":[],"forbidden":[],"reject":true},
+  {"id":"bad-response","class":"malformed","request":"GET / HTTP/1.1\r\nHost: example.test\r\n\r\n","response":"not a response","required":[],"forbidden":[],"reject":true}
+]

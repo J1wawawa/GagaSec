@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-31",
+  "version": "0.10.1",
+  "platform": "Apple Silicon macOS",
+  "native": {
+    "passed": 184,
+    "layouts": 72,
+    "screenshotsCaptured": 24,
+    "errors": []
+  },
+  "report": {
+    "first": 32,
+    "reopen": 5,
+    "physical": 11,
+    "errors": []
+  },
+  "rust": {
+    "passed": 171,
+    "failed": 0,
+    "ignored": 4
+  },
+  "frontendStateAssertions": 25,
+  "checksPassed": [
+    "production build",
+    "prettier",
+    "IPC docs consistency",
+    "source hygiene",
+    "Tauri security configuration",
+    "Clippy -D warnings"
+  ],
+  "modelCalls": false,
+  "userWorkspaceModifiedByTests": false,
+  "nativeFixtureSource": "/var/folders/t_/w4ywrzpd6v74sh32nxq3p1fw0000gn/T/gaga-comfort-native-JfUdgD"
+}

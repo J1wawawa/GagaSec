@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "device": "模拟 EDR",
+  "name": "认证异常后登录成功",
+  "sourceIp": "203.0.113.51",
+  "asset": "lab-ssh",
+  "at": "2026-10-27T08:50:00+08:00",
+  "proof": "见本案例 auth.log，暂无密钥指纹或进程树；未核实授权"
+}

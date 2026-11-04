@@ -1,0 +1,6 @@
+<?php
+/* SYNTHETIC INERT FIXTURE: everything below is a comment, never execute samples.
+eval(base64_decode($_POST['gaga_test']));
+system($_GET['cmd']);
+*/
+echo "Synthetic static-analysis control";

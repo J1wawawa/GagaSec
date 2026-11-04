@@ -1,0 +1,24 @@
+{
+  "finalUrl": "https://www.baidu.com/",
+  "capturedAt": "2026-10-31T13:09:18.513Z",
+  "title": "百度一下，你就知道",
+  "navigations": [
+    {
+      "url": "https://www.baidu.com/",
+      "status": 200,
+      "location": null,
+      "at": "2026-10-31T13:09:16.318Z"
+    },
+    {
+      "url": "https://www.baidu.com/",
+      "at": "2026-10-31T13:09:16.326Z"
+    }
+  ],
+  "navigationError": null,
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "domSha256": "c15040b22f37da5758897141271cff0014d15e67138ab416efb4efc6b38ce808",
+  "screenshotBytes": 97968
+}

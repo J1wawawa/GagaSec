@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "device": "模拟防火墙",
+  "command": {
+    "at": "2026-10-27T10:22:00+08:00",
+    "actor": "张三（合成角色）",
+    "action": "block",
+    "sourceIp": "198.51.100.41",
+    "rule": "SYN-BLOCK-041"
+  },
+  "receipt": {
+    "at": "2026-10-27T10:24:00+08:00",
+    "state": "applied",
+    "rule": "SYN-BLOCK-041"
+  },
+  "notice": "模拟回执，不代表真实设备已封禁"
+}

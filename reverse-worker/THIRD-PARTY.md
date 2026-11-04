@@ -1,0 +1,117 @@
+# 隔离工作器第三方组件
+
+J4team 非商用许可仅适用于本项目自有代码。下列组件及基础镜像按各自许可证提供，保留独立权利。
+
+Pi Agent Core / Pi AI 0.73.1 使用 MIT；TypeBox 1.1.24 使用 MIT；iced-x86 1.21.0 使用 MIT。锁定的传递依赖清单如下；其许可文本保留于 Docker 镜像各包目录。Rust vendor.tar.gz 内保留每个 crate 的原始 LICENSE / COPYING 与校验文件。
+
+| npm 包 | 版本 | 许可标识 |
+|---|---|---|
+| @anthropic-ai/sdk | 0.91.1 | MIT |
+| @aws-sdk/client-bedrock-runtime | 3.1158.0 | Apache-2.0 |
+| @aws-sdk/core | 3.978.6 | Apache-2.0 |
+| @aws-sdk/credential-provider-env | 3.972.77 | Apache-2.0 |
+| @aws-sdk/credential-provider-http | 3.972.79 | Apache-2.0 |
+| @aws-sdk/credential-provider-ini | 3.973.22 | Apache-2.0 |
+| @aws-sdk/credential-provider-login | 3.972.84 | Apache-2.0 |
+| @aws-sdk/credential-provider-node | 3.972.89 | Apache-2.0 |
+| @aws-sdk/credential-provider-process | 3.972.77 | Apache-2.0 |
+| @aws-sdk/credential-provider-sso | 3.973.21 | Apache-2.0 |
+| @aws-sdk/credential-provider-sso/node_modules/@aws-sdk/token-providers | 3.1157.0 | Apache-2.0 |
+| @aws-sdk/credential-provider-web-identity | 3.972.83 | Apache-2.0 |
+| @aws-sdk/eventstream-handler-node | 3.972.39 | Apache-2.0 |
+| @aws-sdk/middleware-eventstream | 3.972.34 | Apache-2.0 |
+| @aws-sdk/middleware-websocket | 3.972.59 | Apache-2.0 |
+| @aws-sdk/nested-clients | 3.997.51 | Apache-2.0 |
+| @aws-sdk/signature-v4-multi-region | 3.996.49 | Apache-2.0 |
+| @aws-sdk/token-providers | 3.1158.0 | Apache-2.0 |
+| @aws-sdk/types | 3.975.0 | Apache-2.0 |
+| @aws-sdk/xml-builder | 3.972.41 | Apache-2.0 |
+| @aws/lambda-invoke-store | 0.3.0 | Apache-2.0 |
+| @babel/runtime | 7.29.10 | MIT |
+| @google/genai | 1.52.0 | Apache-2.0 |
+| @mariozechner/pi-agent-core | 0.73.1 | MIT |
+| @mariozechner/pi-ai | 0.73.1 | MIT |
+| @mistralai/mistralai | 2.7.0 | Apache-2.0 |
+| @opentelemetry/semantic-conventions | 1.43.0 | Apache-2.0 |
+| @protobufjs/aspromise | 1.1.2 | BSD-3-Clause |
+| @protobufjs/base64 | 1.1.2 | BSD-3-Clause |
+| @protobufjs/codegen | 2.0.5 | BSD-3-Clause |
+| @protobufjs/eventemitter | 1.1.1 | BSD-3-Clause |
+| @protobufjs/fetch | 1.1.1 | BSD-3-Clause |
+| @protobufjs/float | 1.0.2 | BSD-3-Clause |
+| @protobufjs/path | 1.1.2 | BSD-3-Clause |
+| @protobufjs/pool | 1.1.0 | BSD-3-Clause |
+| @protobufjs/utf8 | 1.1.2 | BSD-3-Clause |
+| @smithy/core | 3.37.0 | Apache-2.0 |
+| @smithy/credential-provider-imds | 4.5.2 | Apache-2.0 |
+| @smithy/fetch-http-handler | 5.8.0 | Apache-2.0 |
+| @smithy/node-http-handler | 4.13.0 | Apache-2.0 |
+| @smithy/signature-v4 | 5.7.4 | Apache-2.0 |
+| @smithy/types | 4.19.0 | Apache-2.0 |
+| @tootallnate/quickjs-emscripten | 0.23.0 | MIT |
+| @types/node | 26.6.5 | MIT |
+| @types/retry | 0.12.0 | MIT |
+| agent-base | 7.1.4 | MIT |
+| ast-types | 0.13.4 | MIT |
+| base64-js | 1.5.1 | MIT |
+| basic-ftp | 6.2.3 | MIT |
+| bignumber.js | 9.3.1 | MIT |
+| bowser | 2.15.0 | MIT |
+| buffer-equal-constant-time | 1.0.1 | BSD-3-Clause |
+| chalk | 5.6.2 | MIT |
+| data-uri-to-buffer | 4.0.1 | MIT |
+| debug | 4.4.3 | MIT |
+| degenerator | 5.0.1 | MIT |
+| ecdsa-sig-formatter | 1.0.11 | Apache-2.0 |
+| escodegen | 2.1.0 | BSD-2-Clause |
+| esprima | 4.0.1 | BSD-2-Clause |
+| estraverse | 5.3.0 | BSD-2-Clause |
+| esutils | 2.0.3 | BSD-2-Clause |
+| extend | 3.0.2 | MIT |
+| fetch-blob | 3.2.0 | MIT |
+| formdata-polyfill | 4.0.10 | MIT |
+| gaxios | 7.3.1 | Apache-2.0 |
+| gcp-metadata | 8.1.2 | Apache-2.0 |
+| get-uri | 6.0.5 | MIT |
+| get-uri/node_modules/data-uri-to-buffer | 6.0.2 | MIT |
+| google-auth-library | 10.9.1 | Apache-2.0 |
+| google-logging-utils | 1.1.3 | Apache-2.0 |
+| http-proxy-agent | 7.0.2 | MIT |
+| https-proxy-agent | 7.0.6 | MIT |
+| iced-x86 | 1.21.0 | MIT |
+| ip-address | 10.7.5 | MIT |
+| json-bigint | 1.0.0 | MIT |
+| json-schema-to-ts | 3.1.1 | MIT |
+| jwa | 2.0.1 | MIT |
+| jws | 4.0.1 | MIT |
+| long | 5.3.2 | Apache-2.0 |
+| ms | 2.1.3 | MIT |
+| netmask | 2.1.1 | MIT |
+| node-domexception | 1.0.0 | MIT |
+| node-fetch | 3.3.2 | MIT |
+| openai | 6.26.0 | Apache-2.0 |
+| p-retry | 4.6.2 | MIT |
+| pac-proxy-agent | 7.2.0 | MIT |
+| pac-resolver | 7.0.1 | MIT |
+| partial-json | 0.1.7 | MIT |
+| protobufjs | 7.6.6 | BSD-3-Clause |
+| proxy-agent | 6.5.0 | MIT |
+| proxy-agent/node_modules/lru-cache | 7.18.3 | ISC |
+| proxy-from-env | 1.1.0 | MIT |
+| retry | 0.13.1 | MIT |
+| safe-buffer | 5.2.1 | MIT |
+| smart-buffer | 4.2.0 | MIT |
+| socks | 2.8.10 | MIT |
+| socks-proxy-agent | 8.0.5 | MIT |
+| source-map | 0.6.1 | BSD-3-Clause |
+| ts-algebra | 2.0.0 | MIT |
+| tslib | 2.8.1 | 0BSD |
+| typebox | 1.1.24 | MIT |
+| undici | 7.30.1 | MIT |
+| undici-types | 8.9.0 | MIT |
+| web-streams-polyfill | 3.3.3 | MIT |
+| ws | 8.22.0 | MIT |
+| zod | 4.6.7 | MIT |
+| zod-to-json-schema | 3.25.2 | ISC |
+
+基础镜像为 Rust Alpine 与 Node 22 Alpine，包含 Rust、Node.js、Alpine Linux 等组件；镜像内各组件的许可证不受 J4team 项目条款限制。构建锁文件与原始 vendored 源码随项目提供。

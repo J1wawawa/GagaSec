@@ -1,0 +1,25 @@
+name: 使用问题或缺陷
+description: 提交脱敏复现，帮助维护者定位问题
+body:
+  - type: markdown
+    attributes:
+      value: "请先查看功能状态。安全漏洞请按 SECURITY.md 私密报告。不要上传 Key、完整备份、客户材料或真实恶意样本。"
+  - type: input
+    id: version
+    attributes:
+      label: 版本与平台
+      placeholder: "例如 0.7.0 / macOS arm64"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤、预期与实际结果
+      description: "说明所用功能、输入格式和错误代码，可附合成最小样例。"
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: 脱敏诊断或截图
+      description: "可从设置 → 数据与维护导出诊断。截图先遮盖客户信息；不要附完整备份。"

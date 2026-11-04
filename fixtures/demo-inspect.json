@@ -1,0 +1,8 @@
+[
+  {
+    "Name": "/demonstration-container",
+    "Config": {"User": "root"},
+    "HostConfig": {"Privileged": true, "NetworkMode": "host", "PidMode": "", "CapAdd": ["SYS_ADMIN"], "ReadonlyRootfs": false},
+    "Mounts": [{"Source": "/var/run/docker.sock", "Destination": "/var/run/docker.sock", "RW": true}]
+  }
+]

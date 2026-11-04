@@ -1,0 +1,142 @@
+{
+  "version": "0.10.1",
+  "stage": "开发预览版",
+  "product": "嘎嘎安全助手",
+  "positioning": "面向防御团队、运行在个人 PC 上的一站式安全终端",
+  "features": [
+    {
+      "id": "http",
+      "title": "HTTP 与 HAR 联合分析",
+      "status": "本机回归",
+      "module": "http",
+      "boundary": "粘贴请求与响应，保留双侧举证；不回放、不解密 TLS、不以 200 判定成功。"
+    },
+    {
+      "id": "logs",
+      "title": "日志与攻击线索时间线",
+      "status": "本机回归",
+      "module": "logs",
+      "boundary": "后台分析显示实际字节、行数、命中预览与阶段，可取消；跨文件时间线只索引规则命中，未知时间保留未知。"
+    },
+    {
+      "id": "analysis-tasks",
+      "title": "本地分析任务与进度",
+      "status": "本机回归",
+      "module": "logs",
+      "boundary": "日志、WebShell、PE/ELF 后台任务，固定事件归属；最多24项发现预览。静态样本禁网容器解析，不执行样本。"
+    },
+    {
+      "id": "webshell-layers",
+      "title": "WebShell 分层静态分析",
+      "status": "本机回归",
+      "module": "webshell",
+      "boundary": "常量/拼接/别名和常用解码，分层摘要与来源定位，有限 Java 类常量池；无完整 AST、运行时解密、类加载或内存马驻留认证。"
+    },
+    {
+      "id": "reports",
+      "title": "事件、截图与报告编排",
+      "status": "本机回归",
+      "module": "reports",
+      "boundary": "自由两级章节，新增可编辑 Web/勒索/容器模板；DOCX/HTML 导出，PDF 使用系统打印；人员为人工填写。"
+    },
+    {
+      "id": "collection",
+      "title": "专属 Agent 采集回收",
+      "status": "本机回归",
+      "module": "agents",
+      "boundary": "固定信息清单，不是完整取证或任意命令终端；Linux arm64 容器实际运行。"
+    },
+    {
+      "id": "monitoring",
+      "title": "资产页面与 JS 巡检",
+      "status": "本机回归",
+      "module": "assets",
+      "boundary": "客户端运行期间调度；最多 8 个同源 JS，不执行 JavaScript。"
+    },
+    {
+      "id": "intelligence",
+      "title": "本地 IOC 与黑白名单",
+      "status": "本机回归",
+      "module": "knowledge",
+      "boundary": "共享情报与事件证据分开；不自动封禁。在线结果单独保存，不覆盖本地人工判断。"
+    },
+    {
+      "id": "online-intelligence",
+      "title": "官方情报查询与报告举证",
+      "status": "需账号验收",
+      "module": "knowledge",
+      "boundary": "微步按方向查询、域名 RDAP、AbuseIPDB、VirusTotal Hash；默认外发锁定，密钥存系统凭据库。不上传样本或扫描 URL，鉴权接口尚需各服务账号实测。"
+    },
+    {
+      "id": "ai",
+      "title": "四家官方模型复核",
+      "status": "需配置与验收",
+      "module": "settings",
+      "boundary": "仅 DeepSeek / Qwen / GLM / Kimi；本版官方端到端结果以实际连接记录为准。"
+    },
+    {
+      "id": "reverse",
+      "title": "Pi 辅助静态逆向",
+      "status": "实验功能",
+      "module": "binary",
+      "boundary": "四个受控只读工具；无自动脱壳、反编译或复杂恶意代码检出保证。"
+    },
+    {
+      "id": "linux-sandbox",
+      "title": "Linux 动态行为观察",
+      "status": "实验功能",
+      "module": "sandbox",
+      "boundary": "普通 Docker 共享内核；运行不可信样本须使用专用隔离 VM。"
+    },
+    {
+      "id": "windows-sandbox",
+      "title": "Windows CAPE 连接器",
+      "status": "待实机验收",
+      "module": "sandbox",
+      "boundary": "接口回归不等于真实 Windows VM 验收；客户端不内置 Windows 虚拟机。"
+    },
+    {
+      "id": "ebpf",
+      "title": "Linux eBPF 流量观测",
+      "status": "部分实测",
+      "module": "flows",
+      "boundary": "已在 Docker Desktop Linux 内核的隔离回环命名空间实测；目标主机内核和权限仍需另验，连接元数据不是完整流量正文。"
+    },
+    {
+      "id": "runtime-logs",
+      "title": "运行日志与错误记录",
+      "status": "本机回归",
+      "module": "settings",
+      "boundary": "设置独立查询、筛选和复制；5 × 2 MiB 轮转，反馈索引无消息正文。系统强杀、断电及日志磁盘失败不保证记录。"
+    },
+    {
+      "id": "lan",
+      "title": "局域网协作",
+      "status": "本机回归",
+      "module": "lan",
+      "boundary": "IPv4 同网段组播发现、邀请配对、TLS 消息/表情/截图/32 MiB 文件；聊天正文与附件本机加密。尚未双物理设备或 Windows 联调，跨公网、断点续传和群聊未实现。"
+    }
+  ],
+  "platforms": [
+    {
+      "name": "macOS arm64 客户端",
+      "status": "本机回归",
+      "note": "release 优化的开发预览包，ad-hoc 签名，未公证"
+    },
+    {
+      "name": "Windows amd64 客户端",
+      "status": "待实机验收",
+      "note": "共用源码及 CI 配置，不标记运行通过"
+    },
+    {
+      "name": "Linux amd64 / arm64 Agent",
+      "status": "部分实测",
+      "note": "双目标构建，arm64 容器实际采集；目标内核另验"
+    },
+    {
+      "name": "Windows amd64 Agent",
+      "status": "待实机验收",
+      "note": "模板交叉构建，不代表 Windows 实际运行"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "gaga-security-assistant",
+  "version": "0.10.1",
+  "private": true,
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420 --strictPort",
+    "build": "tsc && vite build",
+    "tauri": "tauri",
+    "desktop": "tauri dev",
+    "desktop:build": "tauri build",
+    "desktop:build:mac-dev": "tauri build --debug --bundles app && node scripts/sign-macos-dev.mjs",
+    "format:check": "prettier --check src/main.tsx src/types.ts src/style.css src/ResponseActions.tsx src/Sandbox.tsx src/Platform.tsx src/ai-providers.json src/Dashboard.tsx src/Cases.tsx src/Investigation.tsx src/Modal.tsx src/Navigation.tsx src/analysis-workspace.css src/Reports.tsx src/reports.css src/Reverse.tsx src/reverse.css src/reverse-state.ts src/draft-journal.ts src/Support.tsx src/support.css src/release-manifest.json reverse-worker/agent.mjs reverse-worker/disassemble.mjs scripts/build-agents.mjs scripts/sign-macos-dev.mjs scripts/test-ui-state.mjs src/Privacy.tsx scripts/check-source.mjs scripts/test-source-check.mjs scripts/check-tauri-security.mjs src/ReportExports.tsx src/report-structure.ts src/RecordOptions.tsx src/EvidenceLibrary.tsx src/usability.css src/ReportInsights.tsx src/ReportWatermark.tsx src/report-insights.css src/Lan.tsx src/lan.css src/Startup.tsx src/startup.css src/bridge.ts src/RuntimeLogs.tsx src/runtime-logs.css src/AppErrorBoundary.tsx scripts/package-macos.mjs src/LocalAnalysis.tsx src/local-analysis-state.ts src/local-analysis.css vite.config.ts src/Webshell.tsx src/webshell.css src/report-templates.ts src/Intelligence.tsx src/intelligence.css src-tauri/tests/intel-ui.js src-tauri/tests/comfort-ui.js src-tauri/tests/report-structure-ui.js src-tauri/tests/monitor-ui.js tests/native-comfort.mjs tests/native-report-structure.mjs tests/native-monitor.mjs tests/native-window.mjs monitor-browser/capture.mjs tests/browser-capture.mjs scripts/build-monitor-browser.mjs src/TextEditor.tsx src/text-editor.css",
+    "build:agents": "node scripts/build-agents.mjs",
+    "test:ui-state": "node scripts/test-ui-state.mjs",
+    "check:source": "node scripts/check-source.mjs",
+    "test:source-check": "node scripts/test-source-check.mjs",
+    "check:security": "node scripts/check-tauri-security.mjs",
+    "desktop:build:mac": "tauri build --bundles app && node scripts/sign-macos-dev.mjs --release && node scripts/package-macos.mjs",
+    "check:api": "python3 scripts/generate-api-docs.py --check",
+    "build:monitor-browser": "node scripts/build-monitor-browser.mjs",
+    "test:browser-capture": "node tests/browser-capture.mjs"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.7.0",
+    "vite": "^7.0.0"
+  }
+}

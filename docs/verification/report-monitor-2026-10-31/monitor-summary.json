@@ -1,0 +1,79 @@
+{
+  "root": "/var/folders/t_/w4ywrzpd6v74sh32nxq3p1fw0000gn/T/gaga-monitor-native-BQN1mZ",
+  "first": {
+    "commandInvocations": {
+      "export_report": 2,
+      "get_ai_config": 1,
+      "get_ai_connection_tests": 1,
+      "get_ai_privacy": 1,
+      "get_ai_profiles": 1,
+      "get_dashboard": 1,
+      "get_local_analysis_jobs": 1,
+      "get_report_exports": 5,
+      "get_startup_state": 1,
+      "get_workspace": 9,
+      "platform_action.assetCheck": 2,
+      "platform_action.assetConfigure": 1,
+      "platform_action.assetImport": 1,
+      "platform_action.assetSnapshots": 39,
+      "platform_action.browserEnvironment": 3,
+      "platform_action.browserPrepare": 1,
+      "platform_state": 11,
+      "read_http_text": 3,
+      "record_ui_verification": 1,
+      "screenshot_data": 1,
+      "ui_checkpoint": 1
+    },
+    "errors": [],
+    "modelsCalled": false,
+    "passed": [
+      "Dedicated browser environment is ready",
+      "Browser environment preparation works through the native action",
+      "New targets expose independent redirect and screenshot switches",
+      "Imported options persist without enabling schedule",
+      "Asset settings open as a separate dialog",
+      "HTTP redirect and browser JavaScript redirect have separate final URLs",
+      "Browser records final navigation, DOM digest and real PNG",
+      "Rendered screenshot appears without manual paste",
+      "Automated screenshot has an incident node with source/time/hash",
+      "Evidence preserves redirect response, rendered DOM and screenshot hash",
+      "History payload excludes image/body blobs",
+      "Exported HTML embeds the automatically collected screenshot",
+      "Both capture switches can be independently disabled",
+      "Disabled redirect remains 302 and screenshot stays absent"
+    ],
+    "phase": "first",
+    "publicWebsite": false,
+    "version": "0.10.1"
+  },
+  "reopen": {
+    "commandInvocations": {
+      "get_ai_config": 1,
+      "get_ai_connection_tests": 1,
+      "get_ai_privacy": 1,
+      "get_ai_profiles": 1,
+      "get_dashboard": 1,
+      "get_local_analysis_jobs": 1,
+      "get_report_exports": 1,
+      "get_startup_state": 1,
+      "get_workspace": 2,
+      "platform_action.assetSnapshots": 1,
+      "platform_state": 3,
+      "read_http_text": 1,
+      "record_ui_verification": 1,
+      "screenshot_data": 1
+    },
+    "errors": [],
+    "passed": [
+      "Automatic screenshot and disabled options survive restart",
+      "Reopened screenshot passes stored hash verification"
+    ],
+    "phase": "reopen",
+    "version": "0.10.1"
+  },
+  "files": [
+    "SQLite integrity and FK",
+    "DOCX embeds auto screenshot",
+    "No duplicate screenshots after disabled run"
+  ]
+}

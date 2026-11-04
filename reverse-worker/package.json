@@ -1,0 +1,16 @@
+{
+  "name": "gaga-isolated-pi",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@mariozechner/pi-agent-core": "0.73.1",
+    "@mariozechner/pi-ai": "0.73.1",
+    "typebox": "1.1.24",
+    "iced-x86": "1.21.0"
+  },
+  "overrides": {
+    "@mariozechner/pi-ai": "0.73.1",
+    "basic-ftp": "6.2.3"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "verifiedAt": "2026-10-27",
+  "providers": [
+    {
+      "id": "deepseek",
+      "name": "DeepSeek 官方",
+      "endpoint": "https://api.deepseek.com",
+      "docs": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "note": "DeepSeek 开放平台 API Key",
+      "models": [
+        {
+          "id": "deepseek-flash",
+          "name": "DeepSeek Flash",
+          "options": {
+            "thinking": {
+              "type": "disabled"
+            }
+          }
+        },
+        {
+          "id": "deepseek-v4-pro",
+          "name": "DeepSeek V4 Pro",
+          "options": {
+            "thinking": {
+              "type": "disabled"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen 官方 · 阿里云百炼",
+      "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "docs": "https://help.aliyun.com/zh/model-studio/models",
+      "note": "使用北京地域百炼 API Key；当前接入中国内地官方端点",
+      "models": [
+        {
+          "id": "qwen3.8-max",
+          "name": "Qwen 3.8 Max",
+          "options": {
+            "enable_thinking": false
+          }
+        },
+        {
+          "id": "qwen3.7-plus",
+          "name": "Qwen 3.7 Plus",
+          "options": {
+            "enable_thinking": false
+          }
+        },
+        {
+          "id": "qwen3.8-flash",
+          "name": "Qwen 3.8 Flash",
+          "options": {
+            "enable_thinking": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "glm",
+      "name": "GLM 官方 · 智谱",
+      "endpoint": "https://open.bigmodel.cn/api/paas/v4",
+      "docs": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3",
+      "note": "智谱开放平台 API Key；GLM 5.3 始终启用思考，使用 low 推理强度",
+      "models": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM 5.3",
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoning_effort": "low"
+          }
+        },
+        {
+          "id": "glm-4.7",
+          "name": "GLM 4.7",
+          "options": {
+            "thinking": {
+              "type": "disabled"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi 官方 · 月之暗面",
+      "endpoint": "https://api.moonshot.cn/v1",
+      "docs": "https://platform.moonshot.cn/docs/guide/kimi-k3-1-pro-quickstart",
+      "note": "Moonshot 开放平台 API Key；K3 系列始终启用思考，使用 low 推理强度",
+      "models": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "options": {
+            "reasoning_effort": "low"
+          }
+        },
+        {
+          "id": "kimi-k3.1-pro-highspeed",
+          "name": "Kimi K3.1 Pro 高速版",
+          "options": {
+            "reasoning_effort": "low"
+          }
+        },
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "options": {
+            "reasoning_effort": "low"
+          }
+        }
+      ]
+    }
+  ]
+}

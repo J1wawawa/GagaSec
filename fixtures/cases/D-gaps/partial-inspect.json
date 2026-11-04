@@ -1,0 +1,8 @@
+[
+  {
+    "Name": "/synthetic-partial",
+    "HostConfig": {
+      "Privileged": false
+    }
+  }
+]

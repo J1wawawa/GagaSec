@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Content-Length: 65
+X-Gaga-Synthetic: true
+
+DB_HOST=lab-db
+DB_PASSWORD=gaga-synthetic-do-not-use
+APP_ENV=lab

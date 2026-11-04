@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>NSLocalNetworkUsageDescription</key>
+  <string>开启局域网协作后，用于发现并连接同网段的嘎嘎安全助手，发送经你确认的消息、截图和文件。关闭协作时不监听局域网。</string>
+</dict>
+</plist>

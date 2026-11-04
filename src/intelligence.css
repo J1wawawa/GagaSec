@@ -1,0 +1,240 @@
+.ti-settings {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+.ti-settings > label,
+.ti-query > label,
+.ti-fields > label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+.ti-settings input[type='password'],
+.ti-settings select,
+.ti-query select,
+.ti-query textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.ti-settings .check,
+.ti-options .check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+}
+.ti-settings .check input,
+.ti-options input {
+  flex: 0 0 auto;
+  margin-top: 5px;
+}
+.ti-lock {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.ti-lock > div {
+  flex: 1;
+  min-width: 0;
+}
+.ti-lock p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.ti-actions,
+.ti-head {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ti-head {
+  justify-content: space-between;
+}
+.ti-head h2 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+}
+.ti-workspace {
+  display: grid;
+  grid-template-rows: auto minmax(260px, 1fr);
+  gap: 16px;
+  min-width: 0;
+}
+.ti-query {
+  display: grid;
+  gap: 12px;
+}
+.ti-query .muted,
+.ti-hint {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+.ti-hint {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.ti-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 110px;
+  gap: 12px;
+}
+.ti-query textarea {
+  min-height: 76px;
+  max-height: 200px;
+  resize: vertical;
+  font:
+    12px/1.65 ui-monospace,
+    monospace;
+}
+.ti-options {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+}
+.ti-query > button {
+  justify-self: start;
+}
+.ti-results {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto minmax(240px, 1fr);
+  gap: 14px;
+}
+.ti-result-layout {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1fr);
+  min-height: 0;
+  max-height: 620px;
+}
+.ti-job-list {
+  overflow: auto;
+  min-width: 0;
+  padding-right: 12px;
+  border-right: 1px solid var(--line);
+}
+.ti-job {
+  display: flex;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.ti-job[data-selected='true'] {
+  border-color: var(--line);
+  background: var(--bg);
+}
+.ti-job > button:first-child {
+  display: grid;
+  text-align: left;
+  gap: 5px;
+  padding: 12px;
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+.ti-job strong {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+.ti-job span,
+.ti-job small {
+  font-size: 11px;
+  color: var(--muted);
+}
+.ti-cancel {
+  align-self: center;
+  margin-right: 6px;
+}
+.ti-result-detail {
+  padding: 0 0 0 18px;
+  min-width: 0;
+  overflow: auto;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.ti-result-detail h3,
+.ti-result-detail dd {
+  overflow-wrap: anywhere;
+}
+.ti-result-detail h3 {
+  margin-top: 0;
+}
+.ti-result-detail dl {
+  display: grid;
+  grid-template-columns: 85px minmax(0, 1fr);
+  gap: 8px;
+}
+.ti-result-detail dd {
+  margin: 0;
+}
+.ti-result-detail dt {
+  color: var(--muted);
+}
+.ti-result-detail details {
+  margin-top: 18px;
+}
+.ti-result-detail pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 330px;
+  overflow: auto;
+  font:
+    11px/1.65 ui-monospace,
+    monospace;
+}
+.ti-empty {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  padding: 40px 15px;
+  color: var(--muted);
+  text-align: center;
+}
+.platform-page[data-view='intel-online'] [data-panel='intel-online'] {
+  display: block !important;
+  grid-column: 1 / -1;
+}
+.desktop-settings[data-settings-view='intelligence']
+  [data-settings='intelligence'] {
+  display: block;
+}
+@media (max-width: 1050px) {
+  .ti-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ti-result-layout {
+    grid-template-columns: 1fr;
+    max-height: none;
+  }
+  .ti-job-list {
+    max-height: 230px;
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .ti-result-detail {
+    padding: 18px 0 0;
+    max-height: 480px;
+  }
+  .ti-lock {
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ti-job {
+    transition:
+      border-color 0.15s,
+      background 0.15s;
+  }
+}

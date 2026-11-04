@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "嘎嘎安全助手",
+  "version": "0.10.1",
+  "identifier": "team.j4.gaga-assistant",
+  "build": {
+    "beforeDevCommand": "npm run build:agents && npm run dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "npm run build:agents && npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "嘎嘎安全助手 — J4team",
+        "width": 1320,
+        "height": 860,
+        "minWidth": 960,
+        "minHeight": 660,
+        "resizable": true,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src ipc: http://ipc.localhost; object-src 'none'; base-uri 'self'; frame-src 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "category": "DeveloperTool",
+    "shortDescription": "J4team 本地蓝队调查与举证助手",
+    "copyright": "Copyright © 2026 J4team",
+    "macOS": {
+      "minimumSystemVersion": "11.0"
+    },
+    "resources": [
+      "resources/agents/*",
+      "../licenses/*"
+    ]
+  }
+}
